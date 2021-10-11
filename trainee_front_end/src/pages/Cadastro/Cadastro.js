@@ -44,20 +44,16 @@ function Cadastro(){
                             <Form.Label>Endereço</Form.Label>
                             <Form.Control placeholder="Endereço" />
                         </Form.Group>
-
+                        <br></br>
                         <Row className="mb-3">
                             <Form.Group as={Col} controlId="Telefone">
                                 <Form.Label>Telefone</Form.Label>
                                 <Form.Control type="phone" placeholder="Telefone" />
                             </Form.Group>
 
-                            <Form.Group as={Col} controlId="Estado">
-                                <Form.Label>Estado</Form.Label>
-                                <Form.Select defaultValue="Choose...">
-                                <option>Choose...</option>
-                                <option>ES</option>
-                                <option>MG</option>
-                                </Form.Select>
+                            <Form.Group as={Col} controlId="nascimento">
+                                <Form.Label>Data de Nascimento</Form.Label>
+                                <Form.Control type="birthday" placeholder="Data de nascimento"/>
                             </Form.Group>
 
                             <Form.Group as={Col} controlId="CEP">
