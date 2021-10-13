@@ -9,8 +9,28 @@
 .base {
     height: 100%;
     display: flex;
+    flex-direction: column;
+}
+
+.imagem {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 140px;
+}
+
+/*
+.logo {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.titlecadastro {
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
+    /* width: "800px"; */
+    flex-grow: 1;
+    margin-bottom: 16px;
 }
 
 .dados {
@@ -18,4 +38,22 @@
     flex-direction: column;
     margin-left: 16px;
     margin-right: 16px;
+    width: 330px;
+    flex-grow: 1;
+}
+
+/* .containerCadastroDiv {
+    display: flex;
+     width: 100%; 
+} */
+
+
+.localCadastro{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.butao {
+
 }
