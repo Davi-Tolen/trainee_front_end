@@ -1,0 +1,17 @@
+.entrada{
+ height: 41rem;
+ width:100% ;
+ margin-top: 95px;
+ background-image: url(../../images/entrada.png);
+ 
+ background-repeat: no-repeat;
+ 
+}
+
+
+.botao{
+    float: right;
+    margin-right:  180px;
+    margin-top: 90px;
+    
+}
