@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 423px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.base {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dados{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    color: black;
+}
+.button{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+}
