@@ -1,24 +1,24 @@
 
 
 .button{
-    margin-left: 30px;
-    margin-right: 150px;
-    margin-top: 15px;
+    margin-left: 2rem;
+    margin-right: 9rem;
+    margin-top: 1rem;
 }
 .navbar{
     width: 100%;
-    max-height: 95px ;
+    max-height: 6rem ;
     justify-content: center;
 }
 .navs{
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 20px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
     color: black;
 }
 .navsimage{
-    margin-left: 150px;
-    margin-right: 10px;
+    margin-left: 9rem;
+    margin-right: 1rem;
     
     
     color: black;
