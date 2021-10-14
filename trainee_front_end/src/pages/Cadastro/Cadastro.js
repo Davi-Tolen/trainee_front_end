@@ -1,75 +1,80 @@
-import React from "react";
-import { Form, Button, Row, Col } from "react-bootstrap";
-import "./Cadastro.css"
+import React, { useState } from "react";
+import { Form, Button, List, ListItem, ListItemText, Row, Col, Typography, ListGroupItem } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
+import "./Cadastro.css";
+// import {IconContext} from "react-icons/lib";
+// import {IoMdSend} from "react-icons/io";
 
 function Cadastro(){
+    const [nome, setNome] = useState();
+    const [nascimento, setNascimento] = useState();
+    const [telefone, setTelefone] = useState();
+    const [email, setEmail] = useState();
+    const [endereco, setEndereco] = useState();
+    const [senha, setSenha] = useState();
+    const history = useHistory();
+
+    function login(){
+        alert("Bem Vindo" + nome);
+        history.push("login")
+    }
+
     return (
+        <div>
+            <div className="titlecadastro">
+                    <div className="imagem">
+                        <img className="logo" src="/images/hospitaldaher.jpg" alt="logo" width="150px" height="150px"></img>
+                    </div>
+                    <h2>Cadastro</h2>
+                </div>
         <div className="base">
             <div className="container">
                 <div>
-                    <h1>Cadastro</h1>
                     <Form className="dados">
                     <Row className="mb-3">
-                        <Form.Group as={Col} md="4" controlId="nome">
-                            <Form.Label>Primeiro Nome</Form.Label>
+                        <Form.Group controlId="nome">
                             <Form.Control
                             required
                             type="text"
-                            placeholder="Primeiro nome"
-                            />
-                            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                        </Form.Group>
-                        <Form.Group as={Col} md="4" controlId="sobrenome">
-                            <Form.Label>Sobrenome</Form.Label>
-                            <Form.Control
-                            required
-                            type="text"
-                            placeholder="Sobrenome"
+                            placeholder="Nome Completo"
+                            onChange={(e)=> setNome(e.target.value)}
                             />
                         </Form.Group>
                         </Row>
                         <Row className="mb-3">
-                            <Form.Group as={Col} controlId="Email">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control type="email" placeholder="Endereço de email" />
-                            </Form.Group>
-
-                            <Form.Group as={Col} controlId="Senha">
-                                <Form.Label>Senha</Form.Label>
-                                <Form.Control type="password" placeholder="Senha" />
-                            </Form.Group>
-                        </Row>
-
-                        <Form.Group controlId="Endereço">
-                            <Form.Label>Endereço</Form.Label>
-                            <Form.Control placeholder="Endereço" />
-                        </Form.Group>
-                        <br></br>
-                        <Row className="mb-3">
-                            <Form.Group as={Col} controlId="Telefone">
-                                <Form.Label>Telefone</Form.Label>
-                                <Form.Control type="phone" placeholder="Telefone" />
-                            </Form.Group>
-
                             <Form.Group as={Col} controlId="nascimento">
-                                <Form.Label>Data de Nascimento</Form.Label>
-                                <Form.Control type="birthday" placeholder="Data de nascimento"/>
+                                <Form.Control type="birthday" placeholder="Nascimento" onChange={(e)=> setNascimento(e.target.value)} />
                             </Form.Group>
 
-                            <Form.Group as={Col} controlId="CEP">
-                                <Form.Label>CEP</Form.Label>
-                                <Form.Control />
-                                </Form.Group>
+                            <Form.Group as={Col} controlId="telefone">
+                                <Form.Control type="phone" placeholder="Telefone" onChange={(e)=> setTelefone(e.target.value)}/>
+                            </Form.Group>
+                        </Row>
+                        <Row className="mb-3">
+                            <Form.Group controlId="endereço">
+                                <Form.Control type="address" placeholder="Endereço" onChange={(e)=> setEndereco(e.target.value)}/>
+                            </Form.Group>
+                        </Row>
+                        <Row className="mb-3">
+                            <Form.Group controlId="email">
+                                <Form.Control type="email" placeholder="Endereço de email" onChange={(e)=> setEmail(e.target.value)}/>
+                            </Form.Group>
+                        </Row>
+                        <Row className="mb-3">
+                            <Form.Group controlId="senha">
+                                <Form.Control type="password" placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/>
+                            </Form.Group>
                         </Row>
 
-                        <Button variant="primary" type="enviar">
+                        <Button className="butao" variant="danger" type="submit" onClick={login}>
                         Enviar
-                        </Button>
+                        </Button> 
 
                     </Form>
                 </div>
 
             </div>
+        </div>
         </div>
     )
 }
