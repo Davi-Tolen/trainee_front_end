@@ -11,7 +11,48 @@
 
 .botao{
     float: right;
-    margin-right:  180px;
+    margin-right:  110px;
     margin-top: 90px;
     
+    
 }
+.agendesuaconsulta{
+    width: 300px;
+    
+    
+}
+.historia1{
+    margin-top: 50px;
+    margin-left: 4%;
+    float: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+}
+.logo-header{
+    margin-top: 60px;
+    margin-left: 10px;
+}
+.historia2{
+    width: 40%;
+    margin-top: 250px;
+    margin-right: 4%;
+    float: right;
+}
+.leiamais{
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    
+}
+.resumo{
+   text-align: center; 
+   font-size: 18px;
+   color: black;
+}
+.title{
+    font-size: 64px;
+}
+
