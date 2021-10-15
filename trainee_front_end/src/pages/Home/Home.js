@@ -21,7 +21,15 @@ function Home () {
               </div> 
             
               <div className="profissionais">
-
+                <div claasName="profissionais1">
+                <h1 className="nossosprof">Nossos Profissionais</h1>
+                </div>
+                <div className="profissionais2">
+                  <img className="maryjane" src="/images/maryjane.png" alt="maryjane"></img>
+                  <p className="maryname">Mary Jane Watson</p>
+                
+                  
+                </div>
               </div>
                       
              
