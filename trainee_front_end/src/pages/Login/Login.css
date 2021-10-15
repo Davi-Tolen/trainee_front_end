@@ -1,9 +1,12 @@
 .container {
     display: flex;
     flex-direction: column;
-    max-width: 423px;
+    max-width: 450px; 
     align-items: center;
     flex-grow: 1;
+    padding: 30px;
+    text-align: center;
+    margin-top: 20px; 
 }
 
 .base {
@@ -18,4 +21,26 @@
     flex-direction: column;
     margin-left: 16px;
     margin-right: 16px;
+    
+}
+
+.btn-danger {
+    width: 100%;
+    align-items: center;
+
+}
+
+.btn-link {
+    text-align: center;
+    align-items: center;
+
+}
+.btn-outline-dark {
+     text-align: center;
+}
+.imagem {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 200px;
+    margin-left: 200px;
 }
