@@ -1,43 +1,55 @@
+.alicerce{
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .entrada{
- height: 41rem;
+ height: 120vh;
  width:100% ;
- margin-top: 95px;
+ margin-top: 6%;
  background-image: url(../../images/entrada.png);
- 
+ background-size: cover;
  background-repeat: no-repeat;
- 
+ display: flex;
+ justify-content: center;
 }
 
 
 .botao{
-    float: right;
-    margin-right:  110px;
-    margin-top: 90px;
+    margin-left: 55%;
+    margin-top: 6%;
+    
     
     
 }
 .agendesuaconsulta{
-    width: 300px;
+    width: 140%;
     
     
 }
+.alicerce1{
+    display: flex;
+    
+}
 .historia1{
-    margin-top: 50px;
+    margin-top: 2%;
     margin-left: 4%;
     float: left;
     width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    
 
 }
 .logo-header{
-    margin-top: 60px;
-    margin-left: 10px;
+    margin-top: 2%;
+    margin-left: 3%;
 }
 .historia2{
     width: 40%;
-    margin-top: 250px;
+    margin-top: 12%;
     margin-right: 4%;
     float: right;
 }
@@ -45,22 +57,26 @@
     width: 80%;
     margin-right: 10%;
     margin-left: 10%;
+    background-color: #D41817 !important;
     
 }
 .resumo{
    text-align: center; 
-   font-size: 18px;
+   font-size: 120%;
    color: black;
 }
 .title{
-    font-size: 64px;
+    font-size: 500%;
 }
 
 .profissionais{
-    margin-top: 700px;
+    margin-top: 10%;
     width: 100%;
-    height: 700px;
+    height: 110vh;
     background-color: #0E8F8F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
  
 }
 .profissionais1{
@@ -72,26 +88,58 @@
 }
 .nossosprof{
     color: white;
-    font-size: 60px;
-    margin-left: 28%;
-    margin-right: 25%;
-    position: relative;
-    top: 50px;
+    font-size: 400%;
+    margin-top: 5%;
+    
+    
     
 }  
-.maryjane{
-    position: relative;
-    top: 120px;
-    left: 100px;
+.profissionais2{
+    width: 100%;
+    display: flex;
 }
-.maryname{
-    font-size: 20px;
+.maryjane{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 30%;
+}
+.maryname2{
+    font-size: 140%;
     color: white;
-    position: relative;
-    top: 140px;
-    left: 180px;
+    margin-left: 21% ;
 
 }
+.ivetesangalo{
+    margin-top: 5%;
+    width: 30%;
+   
+}
+.ivetesangalo2{
+    font-size: 140%;
+    color: white;
+    margin-left: 26% ;
+}
+.neymarjunior{
+    margin-top: 5%;
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.neymarjunior2{
+    font-size: 140%;
+    color: white;
+    margin-left: 27% ;
+}
+.profissionais3{
+    width: 20%;
+}
+.vertodos{
+    font-size: 140% !important;
+    margin-top: 20%;
+    width: 100% !important;
+}
+
 
 
     

@@ -6,7 +6,7 @@ function Header (props){
        
             <div>
                 {props.children}
-                <Navbar   variant="light" bg="white" fixed="top">
+                <Navbar   className="navbar" variant="light" bg="white" fixed="top">
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     
@@ -14,23 +14,24 @@ function Header (props){
                    
                         
                     
-                    <Nav  variant="tabs" className="navbar" >
+                    <Nav  variant="tabs" className="navbar1" >
                       
-                      <Navbar.Brand href="/home"><img src="/images/logo-header.png"
-                                                      width="80"
-                                                      height="58,72"
-                                                      className="navsimage"
+                      <Nav.Link className="image" href="/home"><img src="/images/logo-header.png"
+                                                      width="100%"
+                                                      height="58,72vh"
+                                                      
                                                       alt="logo-header"
                                                       />
+                       </Nav.Link>
                     
-                       </Navbar.Brand>
+                       
                       
                       <Nav.Link href="/home"><div className="navs">Home</div></Nav.Link>
                       <Nav.Link href="/nossahistoria"><div className="navs">Nossa História</div></Nav.Link>
                       <Nav.Link href="/nossosprofissionais"><div className="navs">Nossos Profissionais</div></Nav.Link>
                       <Nav.Link href="/contato"><div className="navs">Contato</div></Nav.Link>
                       <div className="button">
-                      <Nav.Link href="/login"><Button variant="danger">Area do Paciente</Button></Nav.Link>
+                      <Nav.Link href="/login"><Button className="areadopaciente" variant="danger">Area do Paciente</Button></Nav.Link>
                       </div>
                       
                     </Nav>

@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
 import Header from "./pages/Header";
 import Home from "./pages/Home";
+import NossaHistoria from "./pages/NossaHistória";
 
 function Routes(){
     return(
@@ -22,6 +23,7 @@ function UserHeader() {
         <Header>
             <Switch>
                 <Route exact path="/home" component={Home}/>
+                <Route exact path="/nossahistoria" component={NossaHistoria}/>
                 <Route component={()=> <Redirect to = "./home" />}/>
                 
             </Switch>

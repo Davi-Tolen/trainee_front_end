@@ -1,25 +1,29 @@
 
 
-.button{
-    margin-left: 2rem;
-    margin-right: 9rem;
-    margin-top: 2px;
+.areadopaciente{
+    background-color: #D41817 !important;
 }
-.navbar{
+.navbar1{
     width: 100%;
-    max-height: 6rem ;
-    justify-content: center;
+    height: 14vh;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-grow: 1;
 }
 .navs{
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 1rem;
+    
+   
     color: black;
+    font-size: 90%;
 }
-.navsimage{
-    margin-left: 9rem;
-    margin-right: 1rem;
-    
-    
-    color: black;
+
+.navbar{
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-evenly !important;
+    flex-direction: row !important;
+    align-content: center !important;
+    max-width: 100%;
+    max-height: 14%;
 }
