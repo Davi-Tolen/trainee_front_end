@@ -44,12 +44,13 @@
 
 }
 .logo-header{
-    margin-top: 2%;
-    margin-left: 3%;
+    margin-top: 15%;
+    margin-left: 15%;
+    width: 70%;
 }
 .historia2{
     width: 40%;
-    margin-top: 12%;
+    margin-top: 18%;
     margin-right: 4%;
     float: right;
 }
@@ -66,7 +67,8 @@
    color: black;
 }
 .title{
-    font-size: 500%;
+    font-size: 300%;
+    margin-left: 22%;
 }
 
 .profissionais{
@@ -88,7 +90,7 @@
 }
 .nossosprof{
     color: white;
-    font-size: 400%;
+    font-size: 300%;
     margin-top: 5%;
     
     
@@ -104,6 +106,9 @@
     margin-right: 5%;
     width: 30%;
 }
+.maryjane1{
+    width: 100%;
+}
 .maryname2{
     font-size: 140%;
     color: white;
@@ -115,10 +120,13 @@
     width: 30%;
    
 }
+.ivetesangalo1{
+    width: 100%;
+}
 .ivetesangalo2{
     font-size: 140%;
     color: white;
-    margin-left: 26% ;
+    margin-left: 30% ;
 }
 .neymarjunior{
     margin-top: 5%;
@@ -126,10 +134,13 @@
     margin-left: 5%;
     margin-right: 5%;
 }
+.neymarjunior1{
+    width: 100%;
+}
 .neymarjunior2{
     font-size: 140%;
     color: white;
-    margin-left: 27% ;
+    margin-left: 30% ;
 }
 .profissionais3{
     width: 20%;

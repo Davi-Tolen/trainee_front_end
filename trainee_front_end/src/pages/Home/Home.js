@@ -23,7 +23,7 @@ function Home () {
             
               <div className="profissionais">
                 <div claasName="profissionais1">
-                  <h1 className="nossosprof">Nossos Profissionais</h1>
+                  <p className="nossosprof">Nossos Profissionais</p>
                 </div>
                 <div className="profissionais2">
                   <div className="maryjane">

@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, Button } from "react-bootstrap";
+import { Navbar, Nav, Button} from "react-bootstrap";
 import "./Header.css";
 function Header (props){
     return(
@@ -7,14 +7,14 @@ function Header (props){
             <div>
                 {props.children}
                 <Navbar   className="navbar" variant="light" bg="white" fixed="top">
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
+                    
+                 
                     
 
                    
                         
-                    
-                    <Nav  variant="tabs" className="navbar1" >
+                 
+                    <Nav   variant="tabs" className="navbar1" >
                       
                       <Nav.Link className="image" href="/home"><img src="/images/logo-header.png"
                                                       width="100%"
@@ -34,10 +34,11 @@ function Header (props){
                       <Nav.Link href="/login"><Button className="areadopaciente" variant="danger">Area do Paciente</Button></Nav.Link>
                       </div>
                       
+                      
                     </Nav>
                     
-                   </Navbar.Collapse>
-                   
+                 
+            
        
     
     
@@ -45,6 +46,7 @@ function Header (props){
       
                     
                 </Navbar>
+           
 
             </div>
         
