@@ -1,5 +1,8 @@
 
-
+@media screen and (min-width: 950px) {
+.dropdown{
+    visibility: hidden;
+}
 .areadopaciente{
     background-color: #D41817 !important;
 }
@@ -18,12 +21,19 @@
 }
 
 .navbar{
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    align-items: center !important;
-    justify-content: space-evenly !important;
-    flex-direction: row !important;
-    align-content: center !important;
+    display: flex ;
+    flex-wrap: nowrap ;
+    align-items: center ;
+    justify-content: space-evenly ;
+    flex-direction: row ;
+    align-content: center ;
     max-width: 100%;
     max-height: 14%;
 }
+
+} 
+
+
+ 
+    
+
