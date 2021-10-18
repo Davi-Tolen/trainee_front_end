@@ -23,31 +23,55 @@
 .btn-danger{
     display: none !important;
 }
+.dropdown-toggle{
+   background-color: #DD1616 !important;
+   border-color: black !important;
+}
+.dropdown-toggle:hover{
+   background-color: #FA6666  !important;
+}
 
-
+.dropdown-item:hover{
+   background-color: #FA6666  !important;
+   
+}
+  
 }
 @media screen and (min-width: 950px) {
+
 .navbar1{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   
+    
 }
 .logo-header{
   display: contents;
 }
 .logo-header1{
- width: 10%;
+ width: 8%;
  
  }
 .headerlinks1{
-    color: black;
+   color: black;
 }
+.headerlinks:hover{
+   background-color: #FA6666;
+}
+
  .dropdown{
     display: none !important;
  }
  .btn-danger{
     background-color: #DD1616 !important;
+ }
+ .btn-danger:hover{
+   background-color: #FA6666 !important;
+ }
+ .dropdownitem{
+   display: contents;
  }
 }
 
