@@ -1,155 +1,39 @@
-.alicerce{
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.entrada{
- height: 120vh;
- width:100% ;
- margin-top: 6%;
- background-image: url(../../images/entrada.png);
- background-size: cover;
- background-repeat: no-repeat;
- display: flex;
- justify-content: center;
-}
-
-
-.botao{
-    margin-left: 55%;
-    margin-top: 6%;
-    
-    
-    
-}
-.agendesuaconsulta{
-    width: 140%;
-    
-    
-}
-.alicerce1{
-    display: flex;
-    
-}
-.historia1{
-    margin-top: 2%;
-    margin-left: 4%;
-    float: left;
-    width: 50%;
+@media screen and (max-width: 950px) {
+.home{
+    width: 100%;
     display: flex;
     flex-direction: column;
     
-
 }
-.logo-nossahistoria{
+.entrada1{
     margin-top: 15%;
-    margin-left: 15%;
-    width: 70%;
+    width: 100%;
 }
-.historia2{
-    width: 40%;
-    margin-top: 18%;
-    margin-right: 4%;
-    float: right;
+.entrada2{
+    display: none;
 }
-.leiamais{
-    width: 80%;
-    margin-right: 10%;
-    margin-left: 10%;
-    background-color: #D41817 !important;
-    
-}
-.resumo{
-   text-align: center; 
-   font-size: 120%;
-   color: black;
-}
-.title{
-    font-size: 300%;
-    margin-left: 22%;
 }
 
-.profissionais{
-    margin-top: 10%;
+@media screen and (min-width: 950px) {
+.home{
     width: 100%;
-    height: 110vh;
-    background-color: #0E8F8F;
     display: flex;
     flex-direction: column;
-    align-items: center;
- 
-}
-.profissionais1{
-    width: 100%;
     
+}
+.entrada1{
+    display: none;
+}
+.entrada2{
+    background-image: url(../../images/entrada.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 10%;
+    width: 200%;
+    
+}
+}
 
-    
-    
-}
-.nossosprof{
-    color: white;
-    font-size: 300%;
-    margin-top: 5%;
-    
-    
-    
-}  
-.profissionais2{
-    width: 100%;
-    display: flex;
-}
-.maryjane{
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 30%;
-}
-.maryjane1{
-    width: 100%;
-}
-.maryname2{
-    font-size: 140%;
-    color: white;
-    margin-left: 21% ;
-
-}
-.ivetesangalo{
-    margin-top: 5%;
-    width: 30%;
-   
-}
-.ivetesangalo1{
-    width: 100%;
-}
-.ivetesangalo2{
-    font-size: 140%;
-    color: white;
-    margin-left: 30% ;
-}
-.neymarjunior{
-    margin-top: 5%;
-    width: 30%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.neymarjunior1{
-    width: 100%;
-}
-.neymarjunior2{
-    font-size: 140%;
-    color: white;
-    margin-left: 30% ;
-}
-.profissionais3{
-    width: 20%;
-}
-.vertodos{
-    font-size: 140% !important;
-    margin-top: 20%;
-    width: 100% !important;
-}
 
 
 
