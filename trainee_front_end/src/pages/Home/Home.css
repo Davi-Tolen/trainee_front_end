@@ -12,6 +12,35 @@
 .entrada2{
     display: none;
 }
+.agende{
+    width: 100%;
+    background-color: #0E8F8F;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.agende1{
+    width: 50%;
+    color: white;
+    text-align: center;
+    font-size: 1.75vh;
+    margin-left: 5%;
+}
+.atende-los{
+    align-items: center;
+    margin-bottom: 0;
+}
+.agende2{
+    width: 30%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.btn-outline-light{
+    font-size: 1.75vh !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
 }
 
 @media screen and (min-width: 950px) {
@@ -25,12 +54,26 @@
     display: none;
 }
 .entrada2{
+    height: 100vh;
+    width:100% ;
+    margin-top: 6%;
     background-image: url(../../images/entrada.png);
-    background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 10%;
-    width: 200%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
     
+}
+.btn-outline-light{
+    margin-top: 8%;
+    margin-right: 15%;
+    padding-left: 5%  !important;
+    padding-right: 5%  !important;
+}
+.btn-outline-light:hover{
+    background-color: #FA6666  !important;
 }
 }
 
