@@ -24,7 +24,14 @@ function Header (props){
                     </DropdownButton>
                    
                   </Nav>  
-                </Navbar>   
+                </Navbar>  
+              </div>
+        
+
+    )
+};
+
+export default Header; 
                     
                     
 
@@ -54,10 +61,4 @@ function Header (props){
                 
            
 
-            </div>
-        
-
-    )
-};
-
-export default Header;
+            
