@@ -29,6 +29,17 @@ function Home () {
               <a href="/nossosprofissionais" className="link"><img src="/images/maryjane.png" alt="maryjane" className="maryjaneimg"></img></a>
               <a href="/nossosprofissionais" className="link"><p className="maryjanetext">Mary Jane</p></a>
             </div>
+            <div className="ivetesangalo">
+              <a href="/nossosprofissionais" className="link"><img src="/images/ivetesangalo.png" alt="ivetesangalo" className="ivetesangaloimg"></img></a>
+              <a href="/nossosprofissionais" className="link"><p className="ivetesangalotext">Ivete Sangalo</p></a>
+            </div>
+            <div className="neymarjunior">
+              <a href="/nossosprofissionais" className="link"><img src="/images/neymarjunior.png" alt="neymarjunior" className="neymarjuniorimg"></img></a>
+              <a href="/nossosprofissionais" className="link"><p className="neymarjuniortext">Neymar Junior</p></a>
+            </div>
+          </div>
+          <div className="profissionais3">
+            <Button href="/nossosprofissionais" variant="outline-danger">Ver Todos</Button>
           </div>
      
           
