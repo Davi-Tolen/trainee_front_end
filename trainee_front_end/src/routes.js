@@ -13,7 +13,7 @@ function Routes(){
             <Switch>
                 <Route exact path="/login" component={Login}/>
                 <Route exact path="/cadastro" component={Cadastro}/>
-                <Route path="/" component={UserMenu}/>
+                <Route path="/menu/" component={UserMenu}/>
             </Switch>
         </BrowserRouter>
     )
@@ -23,9 +23,9 @@ function UserMenu() {
     return(
         <Menu>
             <Switch>
-                <Route exact path="/home" component={Home}/>
-                <Route exact path="/nossahistoria" component={NossaHistoria}/>
-                <Route component={()=> <Redirect to = "./home" />}/>
+                <Route exact path="/menu/home" component={Home}/>
+                <Route exact path="/menu/nossahistoria" component={NossaHistoria}/>
+                <Route component={()=> <Redirect to = "/menu/home" />}/>
                 
             </Switch>
         </Menu>
