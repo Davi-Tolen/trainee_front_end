@@ -4,15 +4,16 @@ import { Button } from "react-bootstrap";
 
 function NossaHistoria() {
     return (
-        <div>
-            <div className="entrada">
-                <div className="botao">
-                  <Button className="agendesuaconsulta" href="/login" variant="outline-light"><div className="botao1">Agende sua Consulta</div></Button>
-                </div>
+        <div className="nossahistoria">
+            <div className="entrada1"><img src="/images/entrada1.png" alt="entrada" className="entrada1"></img></div>
+            <div className="entrada2"><Button href="/login" variant="outline-light">Agende sua Consulta</Button></div>
+            <div className="agende">
+                <div className="agende1"><p className="atende-los">Estamos prontos para atende-lo com eficiência e conforto!</p></div>
+                <div className="agende2"><Button href="/login" variant="outline-light">Agende sua Consulta</Button></div>
             </div>
 
             <div className="tituloetexto">
-                <h1 className="title">Conheça a nossa história</h1>
+                <p className="title">Conheça a nossa história</p>
                 <div className="texto">
                 <p className="paragrafo1">
 Em 1979, surgia em Brasília a Clínica Daher, um ponto de atendimento médico na área de cirurgia plástica
