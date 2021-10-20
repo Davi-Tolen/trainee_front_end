@@ -1,0 +1,294 @@
+
+@media screen and (max-width: 699px) {
+.link{
+    display: contents;
+    text-decoration: none !important;
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .navbar1{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+.logo-header{
+ display: contents;
+}
+.logo-header1{
+    width: 30%;
+ }
+ .headerlinks{
+    display: none !important;
+    color: black;
+ }
+.btn-danger{
+    display: none !important;
+}
+.dropdown-toggle{
+   background-color: #DD1616 !important;
+   border-color: black !important;
+}
+.dropdown-toggle:hover{
+   background-color: #FA6666  !important;
+}
+.dropdown-item{
+   text-decoration: none !important;
+}
+.dropdown-item:hover{
+   background-color: #FA6666  !important;
+   
+}
+.footer{
+   width: 100%;
+   background-color: #0B5757;
+   display: flex;
+   flex-direction: column;
+   padding-top: 4%;
+   padding-bottom: 4%;
+   justify-content: space-between;
+}
+.footer1{
+   margin-left: 1%;
+   width: 85%;
+   display: flex;
+   flex-direction: column; 
+}
+.footertitle{
+   width: 100%;
+}
+.footertitle1{
+   font-size: 180%;
+   color: white;
+   margin-bottom: 0;
+   
+}
+.footeremail{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: 4%;
+}
+.footeremailicon{
+   width: 5%;
+}
+.footeremailtext{
+   margin-bottom: 0;
+   margin-left: 12px;
+   color: white;
+   font-size: 100%;
+}
+.footerlocal{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: 2%;
+}
+.footerlocalicon{
+   width: 5%;
+}
+.footerlocaltext{
+   margin-bottom: 0;
+   margin-left: 12px;
+   color: white;
+   font-size: 100%;
+}
+.footertel{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: 2%;
+}
+.footertelicon{
+   width: 5%;
+}
+.footerteltext{
+   margin-bottom: 0;
+   margin-left: 12px;
+   color: white;
+   font-size: 90%;
+}
+.footer2{
+   margin-top: 5%;
+   margin-left: 10%;
+   margin-right: 10%;
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+}
+.footermidia{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.footercpe{
+   width: 100%;
+   display: flex;
+   margin-top: 20%;
+   justify-content: center;
+}
+.footercpeimg{
+   width: 50%;
+}
+
+
+  
+}
+@media screen and (min-width: 700px) {
+.link{
+    display: contents;
+    text-decoration: none !important;
+}
+.navbar1{
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   
+    
+}
+.logo-header{
+  display: contents;
+}
+.logo-header1{
+ width: 8%;
+ 
+ }
+.headerlinks1{
+   color: black;
+}
+.headerlinks:hover{
+   background-color: #FA6666;
+}
+
+ .dropdown{
+    display: none !important;
+ }
+ .btn-danger{
+    background-color: #DD1616 !important;
+ }
+ .btn-danger:hover{
+   background-color: #FA6666 !important;
+ }
+ .dropdownitem{
+   display: contents;
+ }
+
+.footer{
+   width: 100%;
+   background-color: #0B5757;
+   display: flex;
+   flex-direction: row;
+   padding-top: 4%;
+   padding-bottom: 4%;
+   padding-left: 2%;
+   padding-right: 2%;
+   justify-content: space-between;
+}
+.footer1{
+   margin-left: 1%;
+   width: 45%;
+   display: flex;
+   flex-direction: column; 
+}
+.footertitle{
+   width: 100%;
+}
+.footertitle1{
+   font-size: 180%;
+   color: white;
+   margin-bottom: 0;
+   
+}
+.footeremail{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: 4%;
+}
+.footeremailicon{
+   width: 5%;
+}
+.footeremailtext{
+   margin-bottom: 0;
+   margin-left: 12px;
+   color: white;
+   font-size: 100%;
+}
+.footerlocal{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: 2%;
+}
+.footerlocalicon{
+   width: 5%;
+}
+.footerlocaltext{
+   margin-bottom: 0;
+   margin-left: 12px;
+   color: white;
+   font-size: 100%;
+}
+.footertel{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: 2%;
+}
+.footertelicon{
+   width: 5%;
+}
+.footerteltext{
+   margin-bottom: 0;
+   margin-left: 12px;
+   color: white;
+   font-size: 100%;
+}
+.footer2{
+   margin-right: 5%;
+   margin-top: 3%;
+   width: 15%;
+   display: flex;
+   flex-direction: column;   
+}
+.footermidia{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+.footercpe{
+   width: 100%;
+   display: flex;
+   margin-top: 20%;
+   justify-content: center;
+}
+.footercpeimg{
+   width: 80%;
+}
+
+}
+
+
+
+ 
+    
+
