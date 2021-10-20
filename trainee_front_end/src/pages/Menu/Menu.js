@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Button,  DropdownButton, Dropdown} from "react-bootstrap";
-import "./Header.css";
-function Header (props){
+import "./Menu.css";
+function Menu (props){
     return(
        
             <div>
@@ -25,13 +25,42 @@ function Header (props){
                    
                   </Nav>  
                 </Navbar>  
+                <div className="footer">
+                  <div className="footer1">
+                    <div className="footertitle"><a href="/contato" className="link"><p className="footertitle1">Contato:</p></a></div>
+                    <div className="footeremail">
+                     <a href="/contato" className="link"><img src="/images/emailicon.png" className="footeremailicon" alt="iconeemail"></img></a>
+                     <a href="/contato" className="link"><p className="footeremailtext">daherhospitallagosul@email.com.br</p></a>
+                    </div>
+                    <div className="footerlocal">
+                      <a href="/contato" className="link"><img src="/images/localicon.png" className="footerlocalicon" alt="iconelocal"></img></a>
+                      <a href="/contato" className="link"><p className="footerlocaltext"> Av. Pres. Antônio Carlos, 6627 - Pampulha, Belo Horizonte </p></a>
+                    </div>
+                    <div className="footertel">
+                      <a href="/contato" className="link"><img src="/images/telicon.png" className="footertelicon" alt="iconetelefone"></img></a>
+                      <a href="/contato" className="link"><p className="footerteltext"> (00) 99999-7777 | (00) 3663-8768 </p></a>
+                    </div>
+                  </div>
+                  <div className="footer2">
+                    <div className="footermidia">
+                      <a href="/contato" className="link"><img src="/images/instaicon.png" alt="instagram" className="footerinstaicon"></img></a>
+                      <a href="/contato" className="link"><img src="/images/faceicon.png" alt="facebook" className="footerfaceicon"></img></a>
+                      <a href="/contato" className="link"><img src="/images/twitericon.png" alt="twiter" className="footertwitericon"></img></a>
+                    </div>
+                    <div className="footercpe">
+                      <img src="/images/footercpe.png" alt="CPE" className="footercpeimg"></img>
+                    </div>
+                  </div>
+                    
+                  
+                </div>
               </div>
         
 
     )
 };
 
-export default Header; 
+export default Menu; 
                     
                     
 
