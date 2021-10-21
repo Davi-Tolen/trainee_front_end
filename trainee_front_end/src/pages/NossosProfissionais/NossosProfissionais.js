@@ -25,7 +25,7 @@ function NossosProfissionais(){
         </Form.Select>
       </div>
     </div>
-    <div className="prof">
+    <div id="cardiologia1" className="prof">
       <div className="prof1">
         <img src="/images/maryjane.png" alt="maryjane" className="profimg"></img>
         <p className="proftitle">Mary Jane</p>
@@ -36,77 +36,66 @@ function NossosProfissionais(){
         <p className="profvalue">Valor da consulta: R$ 200,00</p>
       </div>
     </div>
-    <div className="prof">
+    <div id="neurologia1"className="prof">
       <div className="prof1">
-        <img src="" alt="" className="profimg"></img>
-        <p className="proftitle"></p>
+        <img src="/images/ivetesangalo.png" alt="ivetesangalo" className="profimg"></img>
+        <p className="proftitle">Ivete Sangalo</p>
       </div>
       <div className="prof2">
-        <p className="profdescript"></p>
+        <p className="profespecialidade">Especialidade: Neurologia</p>
+        <p className="profdescript">Descrição: Ivete é uma acadêmica formada na Universidade Federal de Minas Gerais especializada em neurologia.</p>
+        <p className="profvalue">Valor da consulta: R$ 250,00</p>
       </div>
+      
+      
     </div>
-    <div className="prof">
+    <div id="pneumologia1" className="prof">
       <div className="prof1">
-        <img src="" alt="" className="prof3img"></img>
-        <p className="prof3title"></p>
+        <img src="/images/neymarjunior.png" alt="neymarjunior" className="profimg"></img>
+        <p className="proftitle">Neymar Junior</p>
       </div>
       <div className="prof2">
-        <p className="prof3descript"></p>
+        <p className="profespecialidade">Especialidade: Pneumologia</p>
+        <p className="profdescript">Descrição: Neymar é um acadêmico formado na Universidade Federal de Minas Gerais especializada em pneumologia.</p>
+        <p className="profvalue">Valor da consulta: R$ 180,00</p>
       </div>
     </div>
-    <div className="prof">
-      <div className="prof4-1">
-        <img src="" alt="" className="prof4img"></img>
-        <p className="prof4title"></p>
+    <div id="cardiologia2" className="prof">
+      <div className="prof1">
+        <img src="/images/maryjane.png" alt="carolainesantos" className="profimg"></img>
+        <p className="proftitle">Carolaine Santos</p>
       </div>
-      <div className="prof4-2">
-        <p className="prof4descript"></p>
+      <div className="prof2">
+        <p className="profespecialidade">Especialidade: Cardiologista</p>
+        <p className="profdescript">Descrição: Carolaine Santos é uma acadêmica formada na Univesridade Federal de Minas Gerais, especializada na área de cardiologia.</p>
+        <p className="profvalue">Valor da consulta: R$ 200,00</p>
+      </div>
+      
+      
+    </div>
+    <div id="neurologia2" className="prof">
+      <div className="prof1">
+        <img src="/images/ivetesangalo.png" alt="paolaparmesini" className="profimg"></img>
+        <p className="proftitle">Paola Parmesini</p>
+      </div>
+      <div className="prof2">
+        <p className="profespecialidade">Especialidade: Neurologia</p>
+        <p className="profdescript">Descrição: Paola Parmesini é uma acadêmica formada na Universidade Federal de Minas Gerais especializada em neurologia.</p>
+        <p className="profvalue">Valor da consulta: R$ 250,00</p>
       </div>
     </div>
-    <div className="prof">
-      <div className="prof5-1">
-        <img src="" alt="" className="prof5img"></img>
-        <p className="prof5title"></p>
+    <div id="pneumologia2" className="prof">
+      <div className="prof1">
+        <img src="/images/neymarjunior.png" alt="francisley francisco" className="profimg"></img>
+        <p className="proftitle">Francisley Francisco</p>
       </div>
-      <div className="prof5-2">
-        <p className="prof5descript"></p>
+      <div className="prof2">
+        <p className="profespecialidade">Especialidade: Pneumologia</p>
+        <p className="profdescript">Descrição: Francisley Francisco é um acadêmico formado na Universidade Federal de Minas Gerais especializada em pneumologia.</p>
+        <p className="profvalue">Valor da consulta: R$ 180,00</p>
       </div>
-    </div>
-    <div className="prof">
-      <div className="prof6-1">
-        <img src="" alt="" className="prof6img"></img>
-        <p className="prof6title"></p>
-      </div>
-      <div className="prof6-2">
-        <p className="prof6descript"></p>
-      </div>
-    </div>
-    <div className="prof">
-      <div className="prof7-1">
-        <img src="" alt="" className="prof7img"></img>
-        <p className="prof7title"></p>
-      </div>
-      <div className="prof7-2">
-        <p className="prof7descript"></p>
-      </div>
-    </div>
-    <div className="prof">
-      <div className="prof8-1">
-        <img src="" alt="" className="prof8img"></img>
-        <p className="prof8title"></p>
-      </div>
-      <div className="prof8-2">
-        <p className="prof8descript"></p>
-      </div>
-    </div>
-    <div className="prof">
-      <div className="prof9-1">
-        <img src="" alt="" className="prof9img"></img>
-        <p className="prof9title"></p>
-      </div>
-      <div className="prof9-2">
-        <p className="prof9descript"></p>
-      </div>
+      
+      
     </div>
 
     

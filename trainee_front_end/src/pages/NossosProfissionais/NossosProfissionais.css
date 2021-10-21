@@ -75,6 +75,42 @@
 .form-select1{
     font-size: 80% !important;
 }
+
+.prof{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: #0E8F8F;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    padding: 5%;
+    border-radius: 10px;
+    align-items: center;
+}
+.prof1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profimg{
+    width: 80%;
+}
+.proftitle{
+    color: white;
+    margin-bottom: 0;
+    margin-top: 2%;
+    font-size: 120%;
+}
+.prof2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    color: white;
+    font-size: 80%;
+    margin-top: 5%;
+}
 }
 
 @media screen and (min-width: 700px) {
@@ -147,7 +183,8 @@
     display: flex;
     flex-direction: row;
     background-color: #0E8F8F;
-    margin-top: 5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
     padding: 5%;
     border-radius: 10px;
     justify-content: space-between;
@@ -176,5 +213,6 @@
     font-size: 100%;
     margin-top: 5%;
 }
+
 
 }
