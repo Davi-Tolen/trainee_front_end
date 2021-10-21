@@ -18,6 +18,7 @@ function Routes(){
                 <Route exact path="/cadastro" component={Cadastro}/>
                 <Route path="/menu" component={UserMenu}/>
                 <Route path="/ap" component={UserHeader}/>
+                <Route component={()=> <Redirect to = "/menu/home" />}/>
             </Switch>
         </BrowserRouter>
     )
