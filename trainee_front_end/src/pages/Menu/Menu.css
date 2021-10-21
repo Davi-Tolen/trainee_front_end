@@ -31,11 +31,12 @@
 .drop{
    display: contents;
 }
-.dropdown-toggle{
+.dropdown-toggle1{
    background-color: #DD1616 !important;
    border-color: black !important;
+   box-shadow: #0E8F8F !important;
 }
-.dropdown-toggle:hover{
+.dropdown-toggle1:hover{
    background-color: #FA6666  !important;
 }
 .dropdown-item{
