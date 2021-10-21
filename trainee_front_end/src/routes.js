@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import NossaHistoria from "./pages/NossaHistória";
 import Header from "./pages/Header";
 import PaginaInicial from "./pages/PaginaInicial";
+import NossosProfissionais from "./pages/NossosProfissionais";
 
 
 function Routes(){
@@ -28,6 +29,7 @@ function UserMenu() {
             <Switch>
                 <Route exact path="/menu/home" component={Home}/>
                 <Route exact path="/menu/nossahistoria" component={NossaHistoria}/>
+                <Route exact path="/menu/nossosprofissionais" component={NossosProfissionais}/>
                 <Route component={()=> <Redirect to = "/menu/home" />}/>
                 
             </Switch>
