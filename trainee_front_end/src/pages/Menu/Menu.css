@@ -28,6 +28,9 @@
 .btn-danger{
     display: none !important;
 }
+.drop{
+   display: contents;
+}
 .dropdown-toggle{
    background-color: #DD1616 !important;
    border-color: black !important;
@@ -172,8 +175,8 @@
    background-color: #FA6666;
 }
 
- .dropdown{
-    display: none !important;
+ .drop{
+    display: none ;
  }
  .btn-danger{
     background-color: #DD1616 !important;

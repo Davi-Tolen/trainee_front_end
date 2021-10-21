@@ -14,14 +14,15 @@ function Menu (props){
                     <Nav.Link className="headerlinks" href="/menu/nossosprofissionais"><div className="headerlinks1">Nossos Profissionais</div></Nav.Link>
                     <Nav.Link className="headerlinks" href="/menu/contato"><div className="headerlinks1">Contato</div></Nav.Link>
                     <Button href="/login"  variant="danger">Area do Paciente</Button>
-                    <DropdownButton   align="end" title="" id="dropdown-menu-align-end">
+                    
+                    <div className="drop"><DropdownButton   align="end" title="" id="dropdown-menu-align-end">
                         <a href="/menu/home" className="dropdownitem"><Dropdown.Item as="button" eventKey="1">Home</Dropdown.Item></a>
                         <a href="/menu/nossahistoria" className="dropdownitem"><Dropdown.Item as="button" eventKey="2">Nossa Historia</Dropdown.Item></a>
                         <a href="/menu/nossosprofissionais" className="dropdownitem"><Dropdown.Item as="button" eventKey="3">Nossa Profissionais</Dropdown.Item></a>
                         <a href="/menu/contato" className="dropdownitem"><Dropdown.Item as="button" eventKey="4">Contato</Dropdown.Item></a>
                         <Dropdown.Divider />
                         <a href="/login" className="dropdownitem"><Dropdown.Item as="button" eventKey="5">Area do Paciente</Dropdown.Item></a>
-                    </DropdownButton>
+                    </DropdownButton></div>
                    
                   </Nav>  
                 </Navbar>  
