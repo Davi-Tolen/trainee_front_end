@@ -28,11 +28,15 @@
 .btn-danger{
     display: none !important;
 }
-.dropdown-toggle{
+.drop{
+   display: contents;
+}
+.dropdown-toggle1{
    background-color: #DD1616 !important;
    border-color: black !important;
+   box-shadow: #0E8F8F !important;
 }
-.dropdown-toggle:hover{
+.dropdown-toggle1:hover{
    background-color: #FA6666  !important;
 }
 .dropdown-item{
@@ -172,8 +176,8 @@
    background-color: #FA6666;
 }
 
- .dropdown{
-    display: none !important;
+ .drop{
+    display: none ;
  }
  .btn-danger{
     background-color: #DD1616 !important;
