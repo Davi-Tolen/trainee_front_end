@@ -31,12 +31,12 @@
     width: 80%;
     color: white;
     text-align: center;
-    font-size: 80%;
     margin-bottom: 5%;
 }
 .atende-los{
     align-items: center;
     margin-bottom: 0;
+    font-size: 160%;
 }
 .agende2{
     width: 20vh;
@@ -80,11 +80,11 @@
     font-size: 90%;
     margin-top: 5%;
 }
-.btn-primary{
+.leiamais{
     background-color: #D41817 !important;
     width: 100%;
 }
-.btn-primary:hover{
+.leiamais{
     background-color: #FA6666 !important;
 }
 .profissionais{
