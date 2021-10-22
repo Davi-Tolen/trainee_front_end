@@ -31,12 +31,12 @@
     width: 80%;
     color: white;
     text-align: center;
-    font-size: 80%;
     margin-bottom: 5%;
 }
 .atende-los{
     align-items: center;
     margin-bottom: 0;
+    font-size: 160%;
 }
 .agende2{
     width: 20vh;
