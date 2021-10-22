@@ -30,13 +30,14 @@
 }
 .drop{
    display: contents;
+   
 }
-.dropdown-toggle1{
+.dropdown-toggle{
    background-color: #DD1616 !important;
    border-color: black !important;
    box-shadow: #0E8F8F !important;
 }
-.dropdown-toggle1:hover{
+.dropdown-toggle:hover{
    background-color: #FA6666  !important;
 }
 .dropdown-item{
