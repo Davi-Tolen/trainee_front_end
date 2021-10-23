@@ -9,12 +9,8 @@ function NossosProfissionais(){
   const [showPneumologia, setshowPneumologia] = useState(true);
 
   useEffect(()=> {
-    if (filtro === "cardiologia") { setshowCardiologia(true)} else if (filtro ==="selecione") {setshowCardiologia(true)} else {setshowCardiologia(false)} 
-  }, [filtro])
-  useEffect(()=> {
-    if (filtro === "neurologia") { setshowNeurologia(true)} else if (filtro ==="selecione") {setshowNeurologia(true)} else {setshowNeurologia(false)} 
-  }, [filtro])
-   useEffect(()=> {
+    if (filtro === "cardiologia") { setshowCardiologia(true)} else if (filtro ==="selecione") {setshowCardiologia(true)} else {setshowCardiologia(false)}
+    if (filtro === "neurologia") { setshowNeurologia(true)} else if (filtro ==="selecione") {setshowNeurologia(true)} else {setshowNeurologia(false)}
     if (filtro === "pneumologia") { setshowPneumologia(true)} else if (filtro ==="selecione") {setshowPneumologia(true)} else {setshowPneumologia(false)} 
   }, [filtro])
 
