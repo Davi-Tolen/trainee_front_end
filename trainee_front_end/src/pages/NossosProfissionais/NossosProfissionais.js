@@ -39,7 +39,7 @@ function NossosProfissionais(){
         </Form.Select>
       </div>
     </div>
-    <div id="profissionais" className="profissionais">
+    <div id="profissionais" className="profissionais5">
       { showCardiologia && <div id="cardiologia1" className="prof">
       <div className="prof1">
         <img src="/images/maryjane.png" alt="maryjane" className="profimg"></img>
