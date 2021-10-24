@@ -9,6 +9,7 @@ import Header from "./pages/Header";
 import PaginaInicial from "./pages/PaginaInicial";
 import NossosProfissionais from "./pages/NossosProfissionais";
 import Contato from "./pages/Contato"
+import MedicosAP from "./pages/MedicosAP";
 
 function Routes(){
     return(
@@ -44,6 +45,7 @@ function UserHeader(){
         <Header>
             <Switch>
                 <Route exact path="/ap/paginainicial" component={PaginaInicial}/>
+                <Route exact path="/ap/medicos" component={MedicosAP}/>
             </Switch>
         </Header>
     )
