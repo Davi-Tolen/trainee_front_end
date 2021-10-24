@@ -80,6 +80,7 @@ function Header(props){
                 </div>
             </Toolbar>
         </AppBar>
+        {props.children}
         <Drawer open={open} onClose={()=> handleDrawer(false)}>
             <List className="list">
                 {pages.map((listItem) => { 
