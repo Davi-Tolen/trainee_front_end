@@ -1,3 +1,61 @@
+@media screen and (max-width: 699px) {
+    .paginainicial{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .primeirosCards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* margin-right: 7%; */
+        margin-top: 6%;
+    }
+    
+    .cards {
+        background-color: #A6E5E5 !important;
+        /* width: 120%; */
+    }
+    
+    .cardActions{
+        display: flex;
+        justify-content: center;
+        color: white !important;
+    }
+    
+    .ultimosCards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* margin-right: 7%; */
+        margin-top: 6%;
+    }
+    
+    .quadro{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        /* margin-right: 80px; */
+        /* margin-left: 7%; */
+        /* margin-top: 8%;  */
+    }
+    
+    .textoquadro{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+    }
+
+
+
+}
+
+@media screen and (min-width: 700px) {
+
 .paginainicial{
     display: flex;
     flex-direction: row;
@@ -10,6 +68,7 @@
     align-items: center;
     justify-content: center;
     margin-right: 7%;
+    margin-top: 4%;
 }
 
 .cards {
@@ -28,7 +87,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: 7%;
+    /* margin-right: 7%; */
+    margin-top: 4%;
 }
 
 .quadro{
@@ -47,3 +107,4 @@
     color: black;
 }
     
+}

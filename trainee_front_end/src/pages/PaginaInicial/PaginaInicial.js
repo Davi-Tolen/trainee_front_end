@@ -26,8 +26,6 @@ function PaginaInicial(){
     return(
         <div className="paginainicial">
             <div className="primeirosCards">
-            <br></br>
-                <br></br>
                 <Card sx={{width: 280}} className="cards">
                     <CardMedia
                     component="img"
@@ -53,9 +51,33 @@ function PaginaInicial(){
                 </Card>
             </div>
 
-            <div ultimosCards>
+            <div className="ultimosCards">
+                <Card sx={{width: 280}} className="cards">
+                    <CardMedia
+                    component="img"
+                    height="180"
+                    image="/images/chat.png"
+                    alt="foto"
+                    />
+                    <CardActions className="cardActions">
+                        <Button size="small" onClick={atendimento}>Atendimento</Button>
+                    </CardActions>
+                </Card>
                 <br></br>
-                <br></br>
+                <Card sx={{width: 280}} className="cards">
+                    <CardMedia
+                    component="img"
+                    height="180"
+                    image="/images/perfil.jpg"
+                    alt="foto"
+                    />
+                    <CardActions className="cardActions">
+                        <Button size="small" onClick={perfil}>Perfil</Button>
+                    </CardActions>
+                </Card>
+            </div>
+
+            {/* <div ultimosCards>
                 <Card sx={{width: 280}} className="cards">
                 <CardMedia
                 component="img"
@@ -79,7 +101,7 @@ function PaginaInicial(){
                         <Button size="small" onClick={perfil}>Perfil</Button>
                     </CardActions>
                 </Card>
-            </div>
+            </div> */}
 
             <div className="quadro">
             <br></br>
