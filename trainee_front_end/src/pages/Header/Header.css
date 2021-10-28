@@ -1,25 +1,25 @@
+.list {
+    width: 260px;
+}
 
+.listitemtext {
+    color: #343434;
+    margin-left: 16px;
+}
 
-.button{
-    margin-left: 2rem;
-    margin-right: 9rem;
-    margin-top: 1rem;
+.toolbar {
+    background-color: #A5E6E6;
 }
-.navbar{
-    width: 100%;
-    max-height: 6rem ;
-    justify-content: center;
+
+.userName {
+    color: #343434;
+    margin: 0;
+    margin-right: 15px;
+    font-size: 1rem;
 }
-.navs{
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 1rem;
-    color: black;
-}
-.navsimage{
-    margin-left: 9rem;
-    margin-right: 1rem;
-    
-    
-    color: black;
+
+.userContainer {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
