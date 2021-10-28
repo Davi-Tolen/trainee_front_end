@@ -20,63 +20,61 @@ function Cadastro(){
     }
 
     return (
-        <div>
-            <div className="titlecadastro">
-                    <div className="imagem">
-                        <img className="logo" src="/images/hospitaldaher.jpg" alt="logo" width="150px" height="150px"></img>
-                    </div>
-                    <h2>Cadastro</h2>
-                </div>
+        
         <div className="base">
             <div className="container">
-                <div>
-                    <Form className="dados">
-                    <Row className="mb-3">
-                        <Form.Group controlId="nome">
-                            <Form.Control
-                            required
-                            type="text"
-                            placeholder="Nome Completo"
-                            onChange={(e)=> setNome(e.target.value)}
-                            />
-                        </Form.Group>
-                        </Row>
-                        <Row className="mb-3">
-                            <Form.Group as={Col} controlId="nascimento">
-                                <Form.Control type="birthday" placeholder="Nascimento" onChange={(e)=> setNascimento(e.target.value)} />
-                            </Form.Group>
+                <div className="borderTwo">
+                    <div className="imagem2">
+                        <img className="logo2" src="/images/hospitaldaher.jpg" alt="logo" width="100vw" height="100vh"></img>
+                        <h1>Cadastro</h1>
+                    </div>
+                        <div>
+                            <Form className="dados">
+                                 <Row className="mb-3">
+                                    <Form.Group controlId="nome">
+                                    <Form.Control
+                                    required
+                                    type="text"
+                                     placeholder="Nome Completo"
+                                    onChange={(e)=> setNome(e.target.value)}
+                                    />
+                                    </Form.Group>
+                                    </Row>
+                                    <Row className="mb-3">
+                                    <Form.Group as={Col} controlId="nascimento">
+                                    <Form.Control type="birthday" placeholder="Nascimento" onChange={(e)=> setNascimento(e.target.value)} />
+                                    </Form.Group>
 
-                            <Form.Group as={Col} controlId="telefone">
-                                <Form.Control type="phone" placeholder="Telefone" onChange={(e)=> setTelefone(e.target.value)}/>
-                            </Form.Group>
-                        </Row>
-                        <Row className="mb-3">
-                            <Form.Group controlId="endereço">
-                                <Form.Control type="address" placeholder="Endereço" onChange={(e)=> setEndereco(e.target.value)}/>
-                            </Form.Group>
-                        </Row>
-                        <Row className="mb-3">
-                            <Form.Group controlId="email">
-                                <Form.Control type="email" placeholder="Endereço de email" onChange={(e)=> setEmail(e.target.value)}/>
-                            </Form.Group>
-                        </Row>
-                        <Row className="mb-3">
-                            <Form.Group controlId="senha">
-                                <Form.Control type="password" placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/>
-                            </Form.Group>
-                        </Row>
+                                    <Form.Group as={Col} controlId="telefone">
+                                        <Form.Control type="phone" placeholder="Telefone" onChange={(e)=> setTelefone(e.target.value)}/>
+                                    </Form.Group>
+                                    </Row>
+                                    <Row className="mb-3">
+                                    <Form.Group controlId="endereço">
+                                        <Form.Control type="address" placeholder="Endereço" onChange={(e)=> setEndereco(e.target.value)}/>
+                                    </Form.Group>
+                                    </Row>
+                                    <Row className="mb-3">
+                                    <Form.Group controlId="email">
+                                        <Form.Control type="email" placeholder="Endereço de email" onChange={(e)=> setEmail(e.target.value)}/>
+                                    </Form.Group>
+                                    </Row>
+                                    <Row className="mb-3">
+                                        <Form.Group controlId="senha">
+                                            <Form.Control type="password" placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/>
+                                        </Form.Group>
+                                    </Row>
 
-                        <Button className="butao" variant="danger" type="submit" onClick={login}>
-                        Enviar
-                        </Button> 
+                                    <Button className="cadBtn" variant="danger" type="submit" onClick={login}>
+                                        Enviar
+                                    </Button> 
 
-                    </Form>
+                            </Form>
+                    </div>
                 </div>
-
             </div>
         </div>
-        </div>
-    )
-}
+);
 
+}
 export default Cadastro;
