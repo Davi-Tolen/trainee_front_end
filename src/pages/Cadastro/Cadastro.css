@@ -1,3 +1,7 @@
+.link{
+    display: contents;
+    text-decoration: none !important;
+}
 .container {
     min-height: 100vh;
     min-width: 100vw;
@@ -50,4 +54,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+  }
+  .fazerlogin{
+    margin-top:10px;
+    color: black;
   }

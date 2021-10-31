@@ -13,6 +13,24 @@ import MedicosAP from "./pages/MedicosAP";
 import Perfil from "./pages/Perfil";
 import Atendimento from "./pages/Atendimento";
 import Agendamento from "./pages/Agendamento";
+import { isAuthenticated } from "./services/auth";
+
+const PrivateRoute = ({component: Component, ...rest}) => (
+    <Route
+      {...rest}
+      render={(props) =>
+        isAuthenticated() ? (
+            <Component {...props} />
+        ) : (
+            <Redirect
+              to= {{ pathname: "/login", state: { from: props.location }}}
+            />
+        )
+       }
+    
+    />
+)
+
 
 function Routes(){
     return(
@@ -47,11 +65,11 @@ function UserHeader(){
     return(
         <Header>
             <Switch>
-                <Route exact path="/ap/paginainicial" component={PaginaInicial}/>
-                <Route exact path="/ap/medicos" component={MedicosAP}/>
-                <Route exact path="/ap/perfil" component={Perfil}/>
-                <Route  exact path="/ap/atendimento" component={Atendimento}/>
-                <Route exact path="/ap/agendamento" component={Agendamento}/>
+                <PrivateRoute exact path="/ap/paginainicial" component={PaginaInicial}/>
+                <PrivateRoute exact path="/ap/medicos" component={MedicosAP}/>
+                <PrivateRoute exact path="/ap/perfil" component={Perfil}/>
+                <PrivateRoute  exact path="/ap/atendimento" component={Atendimento}/>
+                <PrivateRoute exact path="/ap/agendamento" component={Agendamento}/>
             </Switch>
         </Header>
     )

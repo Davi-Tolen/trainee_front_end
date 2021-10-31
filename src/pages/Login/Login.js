@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import api from "../../services/api";
+import {login} from  "../../services/auth";
 
 import "./Login.css";
 import { FcGoogle } from "react-icons/fc";
@@ -7,33 +9,56 @@ import { GrFacebook } from "react-icons/gr";
 import { useHistory } from "react-router";
 
 function Login() {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
   const history = useHistory();
+
+  async function handlelogin(e){
+    e.preventDefault();
+    try {
+      const response = await api.post('/login', {email, password});
+      
+      login(response.data.accesToken);
+
+      history.push("/ap/paginainicial");
+      
+    } catch (error) {
+      if(error.response.status === 403){
+        alert("Credentials Invalidas!");
+      }
+      else{
+        alert(error.response.data.notification);
+      }
+      console.warn(error);
+    }
+    
+  }
   return (
     <div className="base">
       <div className="container">
         <div className="borderOne">
           <div className="imagem2">
-            <img
-              className="logo"
+            <a className="link" href="/menu/home"><img
+              className="logo2"
               src="/images/hospitaldaher.jpg"
               alt="logo"
               width="100vw"
               height="100vh"
-            ></img>
+            ></img></a>
             <h1 className="title">Área do paciente</h1>
           </div>
 
           <Form className="inputs">
             <br></br>
 
-            <Form.Group controlId="email">
-              <Form.Control type="email" placeholder="Endereço de email" />
+            <Form.Group controlId="email" >
+              <Form.Control type="email" placeholder="Endereço de email" onChange= {(e) => setEmail(e.target.value)}  />
             </Form.Group>
             <br></br>
             <Form.Group controlId="senha">
-              <Form.Control type="password" placeholder="Senha" />
+              <Form.Control type="password" placeholder="Senha" onChange= {(e) => setPassword(e.target.value) } />
               <p></p>
-              <Button className=" loginBtn" variant="danger" href="/ap/paginainicial">
+              <Button className=" loginBtn" variant="danger" onClick= {handlelogin}>
                 Login
               </Button>
 
