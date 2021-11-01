@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import {Button } from "react-bootstrap";
 
 import "./Perfil.css";
 
 function Perfil() {
+  const [teste, setTeste] = useState(false);
   return (
     <div className = "perfil">
-       
+        {teste?
+        <p>verdadeiro</p>:
+        <p>falso</p>}
+        <button onClick={ () =>setTeste((antigo) => !antigo) }>Trocar Valor</button>
         <div className="caxinha">
           <div className="quadro">
             <div className="quadro1">
