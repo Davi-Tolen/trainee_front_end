@@ -170,6 +170,9 @@
  width: 8%;
  
  }
+.headerlinks{
+   border-radius: 5px;
+ }
 .headerlinks1{
    color: black;
 }

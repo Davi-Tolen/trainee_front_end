@@ -17,8 +17,12 @@ function Login() {
     e.preventDefault();
     try {
       const response = await api.post('/login', {email, password});
+      const accessToken= response?.data?.accessToken;
+      if (!accessToken){
+        return history.push("/menu/home");
+      }
       
-      login(response.data.accesToken);
+      login(response.data.accessToken);
 
       history.push("/ap/paginainicial");
       
