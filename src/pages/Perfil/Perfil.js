@@ -5,37 +5,33 @@ import "./Perfil.css";
 
 function Perfil() {
   return (
-    <div className="basePerfil">
-      <div className="containerPerfil">
-        <div className="cLeft">
-          <div>Nome: Davi Tolentino</div>
-          <p></p>
-          <div>Email: davitolentino@cpejr.com.br</div>
-          <p></p>
-
-          <div>Senha: **</div>
-          <p></p>
-
-          <div>Endereço: Avenida Cristiano Machado, 0000</div>
-          <p></p>
-
-          <div>Data Nasc: 12/04/02</div>
-          <p></p>
-
-          <div>Telefone: (27)00000-0000</div>
-          <p></p>
-
-          <div>Médicos:</div>
-          <p></p>
-        </div>
-        <div className="cRight">
-          {/* <div className="Avatar"></div> */}
-          <div className="btn-Perf">
-            <Button variant="light">Alterar Dados</Button>
+    <div className = "perfil">
+       
+        <div className="caxinha">
+          <div className="quadro">
+            <div className="quadro1">
+              <p className="quuadro-titles">Nome Completo:</p>
+              <p className="quuadro-titles">Endereço de Email:</p>
+              <p className="quuadro-titles">Telefone:</p>
+              <p className="quuadro-titles">Data de Nascimento:</p>
+              <p className="quuadro-titles">Endereço:</p>
+            </div>
+            <div className="quadro2">
+             <p className="quadro-dados">nome completo</p>
+              <p className="quadro-dados">email</p>
+              <p className="quadro-dados">telefone</p>
+              <p className="quadro-dados">data</p>
+              <p className="quadro-dados">endereço</p>
+            </div>
           </div>
-        </div>
+          <div className="quadro3">
+            <Button className="alterardados" variant="light">Alterar Dados</Button>
+          </div>
+        </div>  
+        
       </div>
-    </div>
+      
+    
   );
 }
 export default Perfil;
