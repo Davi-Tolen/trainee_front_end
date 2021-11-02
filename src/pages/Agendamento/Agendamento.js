@@ -4,15 +4,19 @@ import { Form, Button } from "react-bootstrap";
 import "./Agendamento.css";
 
 function Agendamento() {
+  const [data, setData] = useState();
+  const [horario, setHorario] = useState();
   const [filtro, setFiltro] = useState("selecione");
   const [showCardiologia,setshowCardiologia] = useState(true);
   const [showNeurologia, setshowNeurologia] = useState(true);
   const [showPneumologia, setshowPneumologia] = useState(true);
+  const [showTodos, setShowTodos] = useState(true)
 
   useEffect(()=> {
-    if (filtro === "cardiologia") { setshowCardiologia(true)} else if (filtro ==="selecione") {setshowCardiologia(true)} else {setshowCardiologia(false)}
-    if (filtro === "neurologia") { setshowNeurologia(true)} else if (filtro ==="selecione") {setshowNeurologia(true)} else {setshowNeurologia(false)}
-    if (filtro === "pneumologia") { setshowPneumologia(true)} else if (filtro ==="selecione") {setshowPneumologia(true)} else {setshowPneumologia(false)} 
+    if (filtro === "cardiologia") { setshowCardiologia(true)} else {setshowCardiologia(false)}
+    if (filtro === "neurologia") { setshowNeurologia(true)} else {setshowNeurologia(false)}
+    if (filtro === "pneumologia") { setshowPneumologia(true)} else {setshowPneumologia(false)} 
+    if (filtro === "selecione") { setShowTodos(true)} else {setShowTodos(false)}
   }, [filtro])
 
   return (
@@ -36,45 +40,48 @@ function Agendamento() {
                   <option value="pneumologia">Pneumologia</option>
                 </Form.Select>
               </div>
-              <div className="filtroespecialidade">
-                <Form.Select className="form-select1" aria-label="Default select example" onChange={(e) => setFiltro(e.target.value)  }>
+              <div className="filtroprofissionais">
+                {showCardiologia && <div>
+                <Form.Select className="form-select1" aria-label="Default select example">
                   <option value="selecione">Selecione o profissional</option>
                   <option value="Mary Jane">Mary Jane</option>
+                  <option value="Carolaine Santos">Carolaine Santos</option>
+                </Form.Select>
+                </div>}
+                {showNeurologia && <div>
+                <Form.Select className="form-select1" aria-label="Default select example">
+                  <option value="selecione">Selecione o profissional</option>
+                  <option value="Ivete Sangalo">Ivete Sangalo</option>
+                  <option value="Paola Parmesini">Paola Parmesini</option>
+                </Form.Select>
+                </div>}
+                {showPneumologia && <div>
+                <Form.Select className="form-select1" aria-label="Default select example">
+                  <option value="selecione">Selecione o profissional</option>
+                  <option value="Neymar Junior">Neymar Junior</option>
+                  <option value="Francisley Francisco">Francisley Francisco</option>
+                </Form.Select>
+                </div>}
+                {showTodos && <div>
+                <Form.Select className="form-select1" aria-label="Default select example">
+                  <option value="selecione">Selecione o profissional</option>
+                  <option value="Mary Jane">Mary Jane</option>
+                  <option value="Carolaine Santos">Carolaine Santos</option>
                   <option value="Ivete Sangalo">Ivete Sangalo</option>
                   <option value="Neymar Junior">Neymar Junior</option>
                   <option value="Carolaine Santos">Carolaine Santos</option>
                   <option value="Paola Parmesini">Paola Parmesini</option>
                   <option value="Neymar Junior">Neymar Junior</option>
-                  <option value="Francisley Francisco">Francisley Francisco</option>
+                  <option value="Francisley Francisco">Francisley Francisco</option> 
                 </Form.Select>
+                </div>}
               </div>
-              <div className="filtroespecialidade">
-                <Form.Select className="form-select1" aria-label="Default select example" onChange={(e) => setFiltro(e.target.value)  }>
-                  <option value="selecione">Selecione a data</option>
-                  <option value="05/11/2021">05/11/2021</option>
-                  <option value="06/11/2021">06/11/2021</option>
-                  <option value="08/11/2021">08/11/2021</option>
-                  <option value="09/11/2021">09/11/2021</option>
-                  <option value="10/11/2021">10/11/2021</option>
-                  <option value="11/11/2021">11/11/2021</option>
-                  <option value="12/11/2021">12/11/2021</option>
-                </Form.Select>
-              </div>
-              <div className="filtroespecialidade">
-                <Form.Select className="form-select1" aria-label="Default select example" onChange={(e) => setFiltro(e.target.value)  }>
-                  <option value="selecione">Selecione</option>
-                  <option value="8h00">8h00</option>
-                  <option value="9h00">9h00</option>
-                  <option value="10h00">10h00</option>
-                  <option value="11h00">11h00</option>
-                  <option value="13h00">13h00</option>
-                  <option value="14h00">14h00</option>
-                  <option value="15h00">15h00</option>
-                  <option value="16h00">16h00</option>
-                  <option value="17h00">17h00</option>
-                  <option value="18h00">18h00</option>
-                </Form.Select>
-              </div>
+              <Form.Group controlId="data" >
+                <Form.Control type="date" placeholder="Data" onChange= {(e) => setData(e.target.value)}  />
+              </Form.Group>
+              <Form.Group controlId="horario" >
+                <Form.Control type="hour" placeholder="Horário" onChange= {(e) => setHorario(e.target.value)}  />
+              </Form.Group>
 
             </div>
           </div>
