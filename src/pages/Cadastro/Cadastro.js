@@ -18,6 +18,7 @@ function Cadastro() {
   const [adress, setAdress] = useState();
   const [password, setPassword] = useState();
   async function handleCadastro(e) {
+    console.log(e)
     e.preventDefault();
     try {
       await api.post("/user", {
