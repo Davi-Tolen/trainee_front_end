@@ -10,11 +10,14 @@ function Perfil() {
   const [adress, setAdress] = useState();
   const [password, setPassword] = useState();
 
-  async function getData(user_id) {
+  async function getData() {
     try {
-      const user_id = await api.get("/user/d3257937-5fd8-4ce6-bd9e-4c15537db437");
-       
-      console.log(user_id);
+      const response = await api.get(
+        "/user/f0bb2ee0-e689-479a-9133-ff95e32106a9"
+      );
+      const user = response.data[0];
+      console.log(user);
+      
     } catch (error) {
       console.warn(error);
       alert("Algo deu errado!");
@@ -38,11 +41,11 @@ function Perfil() {
             </div>
 
             <div className="quadro2">
-              <p className="quadro-dados">nome completo</p>
-              <p className="quadro-dados">email</p>
-              <p className="quadro-dados">telefone</p>
-              <p className="quadro-dados">data</p>
-              <p className="quadro-dados">endereço</p>
+              <p className="quadro-dados">{fullname}</p>
+              <p className="quadro-dados">{emailadress}</p>
+              <p className="quadro-dados">{phonenumber}</p>
+              <p className="quadro-dados">{birthdate}</p>
+              <p className="quadro-dados">{adress}</p>
             </div>
           </div>
           <div className="quadro3">
@@ -71,35 +74,35 @@ function Perfil() {
                 id="fullname"
                 className="quadro-dados"
                 type="text"
-                placeholder="Nome Completo"
+                placeholder={fullname}
                 onChange={(e) => setFullname(e.target.value)}
               ></input>
               <input
                 id="emailadress"
                 className="quadro-dados"
                 type="email"
-                placeholder="Endereço de Email"
+                placeholder={emailadress}
                 onChange={(e) => setEmailladress(e.target.value)}
               ></input>
               <input
                 id="phonenumber"
                 className="quadro-dados"
                 type="text"
-                placeholder="Telefone"
+                placeholder={phonenumber}
                 onChange={(e) => setPhonenumber(e.target.value)}
               ></input>
               <input
                 id="birthdate"
                 className="quadro-dados"
                 type="date"
-                placeholder="Data de Nascimento"
+                placeholder={birthdate}
                 onChange={(e) => setBirthdate(e.target.value)}
               ></input>
               <input
                 id="adress"
                 className="quadro-dados"
                 type="text"
-                placeholder="Endereço"
+                placeholder={adress}
                 onChange={(e) => setAdress(e.target.value)}
               ></input>
               <input
