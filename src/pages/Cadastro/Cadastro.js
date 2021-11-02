@@ -1,16 +1,13 @@
 import React, { useState } from "react";
-import {
-  Form,
-  Button,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Form, Button, Row, Col } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import api from "../../services/api";
 import "./Cadastro.css";
 // import {IconContext} from "react-icons/lib";
 // import {IoMdSend} from "react-icons/io";
 
 function Cadastro() {
+  const history = useHistory();
   const [name, setName] = useState();
   const [birthdate, setBirthdate] = useState();
   const [phone, setPhone] = useState();
@@ -18,7 +15,7 @@ function Cadastro() {
   const [adress, setAdress] = useState();
   const [password, setPassword] = useState();
   async function handleCadastro(e) {
-    console.log(e)
+    console.log(e);
     e.preventDefault();
     try {
       await api.post("/user", {
@@ -39,6 +36,7 @@ function Cadastro() {
       console.warn(error);
     }
   }
+ 
 
   return (
     <div className="base">
@@ -113,16 +111,32 @@ function Cadastro() {
                 </Form.Group>
               </Row>
 
-              <Button
-                className="cadBtn"
-                type="submit"
-                onClick={handleCadastro}
-              >
+              <Button className="cadBtn" type="submit" onClick={handleCadastro}>
                 Enviar
               </Button>
-              <a href="/login">
-                <p className="fazerlogin">Fazer Login</p>
-              </a>
+              <div>
+                <hr></hr>
+                <p className="fazerlogin">
+                  <label />
+                  <Button
+                    variant="link"
+                    onClick={() => {
+                      history.push("/Cadastro");
+                    }}
+                  >
+                    Fazer Login
+                  </Button>
+                </p>
+                <Button
+                  variant="link"
+                  onClick={() => {
+                    history.push("/menu/home");
+                  }}
+                >
+                  Voltar para a Home
+                </Button>
+                <hr></hr>
+              </div>
             </Form>
           </div>
         </div>

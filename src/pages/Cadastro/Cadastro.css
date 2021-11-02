@@ -56,7 +56,9 @@
     justify-content: flex-start;
   }
   .fazerlogin{
-    margin-top:10px;
+    margin-bottom: 0;
+  }
+  .voltar{
     color: black;
   }
   .cadBtn{

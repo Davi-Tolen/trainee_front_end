@@ -8,11 +8,12 @@ function Perfil() {
   const [phonenumber, setPhonenumber] = useState();
   const [birthdate, setBirthdate] = useState();
   const [adress, setAdress] = useState();
+  const [password, setPassword] = useState();
 
   async function getData(user_id) {
     try {
-      // const response = await api.get("/user");
-      
+      const user_id = await api.get("/user/d3257937-5fd8-4ce6-bd9e-4c15537db437");
+       
       console.log(user_id);
     } catch (error) {
       console.warn(error);
@@ -63,6 +64,7 @@ function Perfil() {
               <p className="quuadro-titles">Telefone:</p>
               <p className="quuadro-titles">Data de Nascimento:</p>
               <p className="quuadro-titles">Endereço:</p>
+              <p className="quuadro-titles">Senha:</p>
             </div>
             <div className="quadro2">
               <input
@@ -82,7 +84,7 @@ function Perfil() {
               <input
                 id="phonenumber"
                 className="quadro-dados"
-                type="number"
+                type="text"
                 placeholder="Telefone"
                 onChange={(e) => setPhonenumber(e.target.value)}
               ></input>
@@ -99,6 +101,13 @@ function Perfil() {
                 type="text"
                 placeholder="Endereço"
                 onChange={(e) => setAdress(e.target.value)}
+              ></input>
+              <input
+                id="password"
+                className="quadro-dados"
+                type="password"
+                placeholder="Senha"
+                onChange={(e) => setPassword(e.target.value)}
               ></input>
             </div>
           </div>

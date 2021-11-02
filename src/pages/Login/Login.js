@@ -109,6 +109,14 @@ function Login() {
                   Não tem uma conta? Registre-se
                 </Button>
               </p>
+              <Button
+                variant="link"
+                onClick={() => {
+                  history.push("/menu/home");
+                }}
+              >
+                Voltar para a Home
+              </Button>
               <hr></hr>
             </div>
           </Form>
