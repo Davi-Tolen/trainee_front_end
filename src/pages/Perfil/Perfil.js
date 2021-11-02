@@ -6,18 +6,31 @@ function Perfil() {
   const [fullname, setFullname] = useState();
   const [emailadress, setEmailladress] = useState();
   const [phonenumber, setPhonenumber] = useState();
-  const [birthdate, setBirthdate] = useState();
-  const [adress, setAdress] = useState();
+  const [userbirthdate, setUserbirthdate] = useState();
+  const [useradress, setUseradress] = useState();
   const [password, setPassword] = useState();
 
   async function getData() {
     try {
       const response = await api.get(
-        "/user/f0bb2ee0-e689-479a-9133-ff95e32106a9"
+        "/user/7276464d-0377-46b7-ada1-4eb652b042b3"
       );
       const user = response.data[0];
-      console.log(user);
-      
+      const { user_id, name, email, phone, adress, birthdate } = user;
+      const setfullname = () => setFullname(name);
+      const setemailladress = () => setEmailladress(email);
+      const setphonenumber = () => setPhonenumber(phone);
+      const setuseradress = () => setUseradress(adress);
+      const setuserbirthdate = () => setUserbirthdate(birthdate);
+
+      function setar() {
+        setfullname();
+        setemailladress();
+        setphonenumber();
+        setuseradress();
+        setuserbirthdate();
+      }
+      setar();
     } catch (error) {
       console.warn(error);
       alert("Algo deu errado!");
@@ -44,8 +57,8 @@ function Perfil() {
               <p className="quadro-dados">{fullname}</p>
               <p className="quadro-dados">{emailadress}</p>
               <p className="quadro-dados">{phonenumber}</p>
-              <p className="quadro-dados">{birthdate}</p>
-              <p className="quadro-dados">{adress}</p>
+              <p className="quadro-dados">{userbirthdate}</p>
+              <p className="quadro-dados">{useradress}</p>
             </div>
           </div>
           <div className="quadro3">
@@ -95,15 +108,15 @@ function Perfil() {
                 id="birthdate"
                 className="quadro-dados"
                 type="date"
-                placeholder={birthdate}
-                onChange={(e) => setBirthdate(e.target.value)}
+                placeholder={userbirthdate}
+                onChange={(e) => setUserbirthdate(e.target.value)}
               ></input>
               <input
                 id="adress"
                 className="quadro-dados"
                 type="text"
-                placeholder={adress}
-                onChange={(e) => setAdress(e.target.value)}
+                placeholder={useradress}
+                onChange={(e) => setUseradress(e.target.value)}
               ></input>
               <input
                 id="password"
