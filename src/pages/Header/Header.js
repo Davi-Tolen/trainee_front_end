@@ -36,33 +36,43 @@ function Header(props) {
     return history.push("/menu/home");
   }
 
+  function handleTudo(pathName, on){
+    setOpen(on)
+    history.push(pathName)
+  }
+
   const pages = [
     {
-      handle: () => history.push("/ap/paginainicial"),
+      handle: () => handleTudo("/ap/paginainicial", false),
+      pathName: "/ap/paginainicial",
       icon: <MdHome />,
       text: "Página Inicial",
       iconSize: "1.5em",
     },
     {
-      handle: () => history.push("/ap/medicos"),
+      handle: () => handleTudo("/ap/medicos", false),
+      pathName: "/ap/medicos",
       icon: <BsPersonFill />,
       text: "Médicos",
       iconSize: "1.5em",
     },
     {
-      handle: () => history.push("/ap/atendimento"),
+      handle: () => handleTudo("/ap/atendimento", false),
+      pathName: "/ap/atendimento",
       icon: <BsFillChatFill />,
       text: "Atendimento",
       iconSize: "1.5em",
     },
     {
-      handle: () => history.push("/ap/agendamento"),
+      handle: () => handleTudo("/ap/agendamento", false),
+      pathName: "/ap/agendamento",
       icon: <BsFillCalendarEventFill />,
       text: "Agendamento",
       iconSize: "1.5em",
     },
     {
-      handle: () => history.push("/ap/perfil"),
+      handle: () => handleTudo("/ap/perfil", false),
+      pathName: "/ap/perfil",
       icon: <BsPersonFill />,
       text: "Perfil",
       iconSize: "1.5em",

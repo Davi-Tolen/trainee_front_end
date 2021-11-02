@@ -1,63 +1,101 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 
 import "./Agendamento.css";
 
 function Agendamento() {
+  const [data, setData] = useState();
+  const [horario, setHorario] = useState();
+  const [filtro, setFiltro] = useState("selecione");
+  const [showCardiologia,setshowCardiologia] = useState(true);
+  const [showNeurologia, setshowNeurologia] = useState(true);
+  const [showPneumologia, setshowPneumologia] = useState(true);
+  const [showTodos, setShowTodos] = useState(true)
+
+  useEffect(()=> {
+    if (filtro === "cardiologia") { setshowCardiologia(true)} else {setshowCardiologia(false)}
+    if (filtro === "neurologia") { setshowNeurologia(true)} else {setshowNeurologia(false)}
+    if (filtro === "pneumologia") { setshowPneumologia(true)} else {setshowPneumologia(false)} 
+    if (filtro === "selecione") { setShowTodos(true)} else {setShowTodos(false)}
+  }, [filtro])
+
   return (
-    <div className="baseAgendamento">
-      <div className="containerAgendamento">
-        <div className="rightL">
-          <div className="titleA">Próximos Eventos: </div>
-          <div>Data: 18/10/21</div>
-          <div>Horário: 18:00</div>
-          <div>Médico: Ivete Santiago</div>
-        </div>
+    <div className="agendamento">
+        <div className="caixa">
+        <p className="textTitle">Novo agendamento:</p>
+          <div className="quadro">
+            <div className="quadro1">
+              <p className="quuadro-titles">Especialidade:</p>
+              <p className="quuadro-titles">Profissional:</p>
+              <p className="quuadro-titles">Data:</p>
+              <p className="quuadro-titles">Horário:</p>
+            </div>
 
-        <div className="rightC">
-          <div className="formA">
-            <h1 className="textTitle">Novo Agendamento:</h1>
-            <Form>
-              <Form.Group className="mb-3">
-                <Form.Label htmlFor="">Selecione um profissional</Form.Label>
-                <Form.Select id="disabledSelect">
-                  <option>Selecione a Especialidade</option>
-                  <option>Cardiologia</option>
-                  <option>Neurologia</option>
-                  <option>Pneumologia</option>
+            <div className="quadro2">
+              <div className="filtroespecialidade">
+                <Form.Select className="form-select1" aria-label="Default select example" onChange={(e) => setFiltro(e.target.value)  }>
+                  <option value="selecione">Selecione a Especialidade</option>
+                  <option value="cardiologia">Cardiologia</option>
+                  <option value="neurologia">Neurologia</option>
+                  <option value="pneumologia">Pneumologia</option>
                 </Form.Select>
-
-                <Form.Label htmlFor="Selecione uma data">
-                  Selecione uma data
-                </Form.Label>
-                <Form.Select id="disabledSelect">
-                  <option>Selecione</option>
-                  <option>01/01/21</option>
-                  <option>11/10/21</option>
-                  <option>21/01/21</option>
-                  <option>09/05/21</option>
+              </div>
+              <div className="filtroprofissionais">
+                {showCardiologia && <div>
+                <Form.Select className="form-select1" aria-label="Default select example">
+                  <option value="selecione">Selecione o profissional</option>
+                  <option value="Mary Jane">Mary Jane</option>
+                  <option value="Carolaine Santos">Carolaine Santos</option>
                 </Form.Select>
-                <Form.Label htmlFor="Selecione um horario">
-                  Selecione um horario
-                </Form.Label>
-                <Form.Select id="disabledSelect">
-                  <option>Selecione</option>
-                  <option>08:00</option>
-                  <option>09:00</option>
-                  <option>10:00</option>
-                  <option>11:00</option>
+                </div>}
+                {showNeurologia && <div>
+                <Form.Select className="form-select1" aria-label="Default select example">
+                  <option value="selecione">Selecione o profissional</option>
+                  <option value="Ivete Sangalo">Ivete Sangalo</option>
+                  <option value="Paola Parmesini">Paola Parmesini</option>
                 </Form.Select>
+                </div>}
+                {showPneumologia && <div>
+                <Form.Select className="form-select1" aria-label="Default select example">
+                  <option value="selecione">Selecione o profissional</option>
+                  <option value="Neymar Junior">Neymar Junior</option>
+                  <option value="Francisley Francisco">Francisley Francisco</option>
+                </Form.Select>
+                </div>}
+                {showTodos && <div>
+                <Form.Select className="form-select1" aria-label="Default select example">
+                  <option value="selecione">Selecione o profissional</option>
+                  <option value="Mary Jane">Mary Jane</option>
+                  <option value="Carolaine Santos">Carolaine Santos</option>
+                  <option value="Ivete Sangalo">Ivete Sangalo</option>
+                  <option value="Neymar Junior">Neymar Junior</option>
+                  <option value="Carolaine Santos">Carolaine Santos</option>
+                  <option value="Paola Parmesini">Paola Parmesini</option>
+                  <option value="Neymar Junior">Neymar Junior</option>
+                  <option value="Francisley Francisco">Francisley Francisco</option> 
+                </Form.Select>
+                </div>}
+              </div>
+              <Form.Group controlId="data" >
+                <Form.Control type="date" placeholder="Data" onChange= {(e) => setData(e.target.value)}  />
               </Form.Group>
-            </Form>
+              <Form.Group controlId="horario" >
+                <Form.Control type="hour" placeholder="Horário" onChange= {(e) => setHorario(e.target.value)}  />
+              </Form.Group>
+
+            </div>
           </div>
-          <div className="agend">
-            <Button className="agendBtn" variant="outline-dark">
+          <div className="quadro3">
+            <Button
+              className="alterardados"
+              variant="light"
+            >
               Confirmar
             </Button>
           </div>
         </div>
-      </div>
     </div>
+
   );
 }
 export default Agendamento;
