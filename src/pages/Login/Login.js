@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import api from "../../services/api";
-import {login} from  "../../services/auth";
+import { login } from "../../services/auth";
 
 import "./Login.css";
 import { FcGoogle } from "react-icons/fc";
@@ -13,56 +13,67 @@ function Login() {
   const [password, setPassword] = useState();
   const history = useHistory();
 
-  async function handlelogin(e){
+  async function handlelogin(e) {
     e.preventDefault();
     try {
-      const response = await api.post('/login', {email, password});
-      const accessToken= response?.data?.accessToken;
-      if (!accessToken){
+      const response = await api.post("/login", { email, password });
+      const accessToken = response?.data?.accessToken;
+      if (!accessToken) {
         return history.push("/menu/home");
       }
-      
+      console.log(response.data);
       login(response.data.accessToken);
 
       history.push("/ap/paginainicial");
-      
     } catch (error) {
-      if(error.response.status === 403){
+      if (error.response.status === 403) {
         alert("Credentials Invalidas!");
-      }
-      else{
+      } else {
         alert(error.response.data.notification);
       }
       console.warn(error);
     }
-    
   }
   return (
     <div className="base">
       <div className="container">
         <div className="borderOne">
           <div className="imagem2">
-            <a className="link" href="/menu/home"><img
-              className="logo2"
-              src="/images/hospitaldaher.jpg"
-              alt="logo"
-              width="100vw"
-              height="100vh"
-            ></img></a>
+            <a className="link" href="/menu/home">
+              <img
+                className="logo2"
+                src="/images/hospitaldaher.jpg"
+                alt="logo"
+                width="100vw"
+                height="100vh"
+              ></img>
+            </a>
             <h1 className="title">Área do paciente</h1>
           </div>
 
           <Form className="inputs">
             <br></br>
 
-            <Form.Group controlId="email" >
-              <Form.Control type="email" placeholder="Endereço de email" onChange= {(e) => setEmail(e.target.value)}  />
+            <Form.Group controlId="email">
+              <Form.Control
+                type="email"
+                placeholder="Endereço de email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </Form.Group>
             <br></br>
             <Form.Group controlId="senha">
-              <Form.Control type="password" placeholder="Senha" onChange= {(e) => setPassword(e.target.value) } />
+              <Form.Control
+                type="password"
+                placeholder="Senha"
+                onChange={(e) => setPassword(e.target.value)}
+              />
               <p></p>
-              <Button className=" loginBtn" variant="danger" onClick= {handlelogin}>
+              <Button
+                className=" loginBtn"
+                variant="danger"
+                onClick={handlelogin}
+              >
                 Login
               </Button>
 

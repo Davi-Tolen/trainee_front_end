@@ -1,17 +1,19 @@
 import api from "../../services/api";
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
-
 import "./Perfil.css";
-
 function Perfil() {
   const [fullname, setFullname] = useState();
-  async function getData() {
+  const [emailadress, setEmailladress] = useState();
+  const [phonenumber, setPhonenumber] = useState();
+  const [birthdate, setBirthdate] = useState();
+  const [adress, setAdress] = useState();
+
+  async function getData(user_id) {
     try {
-      const response = await api.get(
-        "/user/d3257937-5fd8-4ce6-bd9e-4c15537db437"
-      );
-      console.log(response);
+      // const response = await api.get("/user");
+      
+      console.log(user_id);
     } catch (error) {
       console.warn(error);
       alert("Algo deu errado!");
@@ -73,26 +75,30 @@ function Perfil() {
               <input
                 id="emailadress"
                 className="quadro-dados"
-                type="text"
+                type="email"
                 placeholder="Endereço de Email"
+                onChange={(e) => setEmailladress(e.target.value)}
               ></input>
               <input
                 id="phonenumber"
                 className="quadro-dados"
-                type="text"
+                type="number"
                 placeholder="Telefone"
+                onChange={(e) => setPhonenumber(e.target.value)}
               ></input>
               <input
                 id="birthdate"
                 className="quadro-dados"
-                type="text"
+                type="date"
                 placeholder="Data de Nascimento"
+                onChange={(e) => setBirthdate(e.target.value)}
               ></input>
               <input
                 id="adress"
                 className="quadro-dados"
                 type="text"
                 placeholder="Endereço"
+                onChange={(e) => setAdress(e.target.value)}
               ></input>
             </div>
           </div>
