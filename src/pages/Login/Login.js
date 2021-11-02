@@ -21,7 +21,7 @@ function Login() {
       if (!accessToken) {
         return history.push("/menu/home");
       }
-      console.log(response.data);
+
       login(response.data.accessToken);
 
       history.push("/ap/paginainicial");
@@ -69,11 +69,7 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
               <p></p>
-              <Button
-                className=" loginBtn"
-                variant="danger"
-                onClick={handlelogin}
-              >
+              <Button className=" loginBtn" onClick={handlelogin}>
                 Login
               </Button>
 
