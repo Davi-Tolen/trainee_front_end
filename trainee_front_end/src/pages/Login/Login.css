@@ -15,6 +15,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url(./loginCadastro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .borderOne{
     padding: 0.7rem;
@@ -35,7 +39,7 @@
 
 }
 
-.loginBtn{
+.lButton{
 
     width: 100%;
     align-items: center;
@@ -73,6 +77,5 @@
 .title{
     margin-top: 60px; 
 }
-
 
 

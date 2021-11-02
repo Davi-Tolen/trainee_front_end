@@ -33,7 +33,9 @@ function Login() {
             <Form.Group controlId="senha">
               <Form.Control type="password" placeholder="Senha" />
               <p></p>
-              <Button className=" loginBtn" variant="danger" href="/ap/paginainicial">
+              <Button className="lButton" variant="danger" onClick={() => {
+                    history.push("/ap/paginainicial");
+                  }}>
                 Login
               </Button>
 

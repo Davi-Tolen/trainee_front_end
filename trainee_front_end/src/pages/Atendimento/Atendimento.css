@@ -28,6 +28,7 @@
       background-color: #a5e6e6;
       border-radius: 10px;
       height: 65%;
+      flex-direction: column;
       width: 85%;
       margin-top: 10px;
       margin-left: 20px;
@@ -177,9 +178,20 @@
       justify-content: center;
       background-color: #a5e6e6;
       border-radius: 10px;
-      height: 82%;
+      /* height: 82%; */
       width: 45%;
       margin-top: 5%;
+/* 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #a5e6e6;
+      border-radius: 10px;
+      height: 65%; 
+      flex-direction: column;
+      width: 85%;
+      margin-top: 10px;
+      margin-left: 20px; */
     }
     .putsIn {
       width: 90%;

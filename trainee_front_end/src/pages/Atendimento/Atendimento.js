@@ -33,9 +33,10 @@ function Atendimento() {
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Mensagem</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+            > 
+              <Form.Label >Mensagem</Form.Label>
+              <Form.Control  as="textarea" rows={10} />
+              
             </Form.Group>
             <Button variant="info">Enviar</Button>{" "}
           </Form>
