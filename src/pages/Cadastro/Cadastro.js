@@ -115,7 +115,6 @@ function Cadastro() {
 
               <Button
                 className="cadBtn"
-                variant="danger"
                 type="submit"
                 onClick={handleCadastro}
               >

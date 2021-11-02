@@ -62,7 +62,7 @@ function Login() {
             <Form.Group controlId="senha">
               <Form.Control type="password" placeholder="Senha" onChange= {(e) => setPassword(e.target.value) } />
               <p></p>
-              <Button className=" loginBtn" variant="danger" onClick= {handlelogin}>
+              <Button className=" loginBtn" onClick= {handlelogin}>
                 Login
               </Button>
 
