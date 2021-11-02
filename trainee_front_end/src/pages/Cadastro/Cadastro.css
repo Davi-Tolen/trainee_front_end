@@ -13,6 +13,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url(../../images/loginCadastro.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
   
   .borderTwo {
