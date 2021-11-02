@@ -68,8 +68,6 @@ function Agendamento() {
                   <option value="Mary Jane">Mary Jane</option>
                   <option value="Carolaine Santos">Carolaine Santos</option>
                   <option value="Ivete Sangalo">Ivete Sangalo</option>
-                  <option value="Neymar Junior">Neymar Junior</option>
-                  <option value="Carolaine Santos">Carolaine Santos</option>
                   <option value="Paola Parmesini">Paola Parmesini</option>
                   <option value="Neymar Junior">Neymar Junior</option>
                   <option value="Francisley Francisco">Francisley Francisco</option> 
