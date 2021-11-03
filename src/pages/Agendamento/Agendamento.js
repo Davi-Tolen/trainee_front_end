@@ -5,9 +5,9 @@ import api from "../../services/api";
 import "./Agendamento.css";
 
 function Agendamento() {
-  const [docId, setDocId] = useState();
-  const [data, setData] = useState();
-  const [horario, setHorario] = useState();
+  const [doctor_id, setDocId] = useState();
+  const [date, setData] = useState();
+  const [hour, setHorario] = useState();
   const [filtro, setFiltro] = useState("selecione");
   const [showCardiologia,setshowCardiologia] = useState(true);
   const [showNeurologia, setshowNeurologia] = useState(true);
@@ -17,10 +17,17 @@ function Agendamento() {
   async function handleAgendamento(e){
     e.preventDefault();
     try{
-      await api.post("/consultation", {
-        docId,
-        data,
-        horario,
+        const response = await api.get(
+          "/user/de0dd342-4c8b-4e23-abc0-1737f0d56872"
+        );
+        const user = response.data[0];
+        const {user_id} = user;
+        console.log(user_id)
+       await api.post("/consultation", {
+        user_id,
+        date,
+        hour,
+        doctor_id,
       });
       alert("Consulta marcada com sucesso!")
     } catch (error) {
@@ -60,7 +67,7 @@ function Agendamento() {
                 {showCardiologia && <div>
                 <Form.Select className="form-select1" aria-label="Default select example" onChange={(e) => setDocId(e.target.value)  }>
                   <option value="selecione">Selecione o profissional</option>
-                  <option value="b1ec2eb0-7f2f-4f71-b0c1-ffef54341b43">Mary Jane</option>
+                  <option value="09154ef3-cf81-4860-a830-8625d9c728a1">Mary Jane</option>
                   <option value="Carolaine Santos">Carolaine Santos</option>
                 </Form.Select>
                 </div>}
