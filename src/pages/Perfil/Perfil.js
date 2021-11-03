@@ -13,52 +13,26 @@ function Perfil() {
   const [data, setData] = useState([]);
   const user_id = getUserId();
 
-  async function updateData(e){
+  async function updateData(e) {
     const body = {
       name: fullname,
-      email: emailadress, 
-      phone: phonenumber, 
-      adress: useradress, 
+      email: emailadress,
+      phone: phonenumber,
+      adress: useradress,
       birthdate: userbirthdate,
-    }
-    console.log("console",body)
-    try{
-      const response = await api.put(
-        `/user/${user_id}`, body
-      );
-      setTeste(!teste)
-      getData()
-    } catch(error){
+    };
+    setTeste(!teste);
+    try {
+      await api.put(`/user/${user_id}`, body);
+      getData();
+    } catch (error) {
       console.error(error);
     }
   }
 
   async function getData() {
-    const response = await api.get(
-      `/user/${user_id}`
-    );
+    const response = await api.get(`/user/${user_id}`);
     setData(response.data);
-    // try {
-    //   const user = response.data[0];
-    //   const { user_id, name, email, phone, adress, birthdate } = user;
-    //   const setfullname = () => setFullname(name);
-    //   const setemailladress = () => setEmailladress(email);
-    //   const setphonenumber = () => setPhonenumber(phone);
-    //   const setuseradress = () => setUseradress(adress);
-    //   const setuserbirthdate = () => setUserbirthdate(birthdate);
-
-    //   function setar() {
-    //     setfullname();
-    //     setemailladress();
-    //     setphonenumber();
-    //     setuseradress();
-    //     setuserbirthdate();
-    //   }
-    //   setar();
-    // } catch (error) {
-    //   console.warn(error);
-    //   alert("Algo deu errado!");
-    // }
   }
   useEffect(() => {
     getData();
