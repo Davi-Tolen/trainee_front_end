@@ -25,8 +25,9 @@ function PaginaInicial(){
 
     return(
         <div className="paginainicial">
+            <div className="containerPi">
             <div className="primeirosCards">
-                <Card sx={{width: 280}} className="cards">
+                <Card sx={{width: 260}} className="cards">
                     <CardMedia
                     component="img"
                     height="180"
@@ -38,7 +39,7 @@ function PaginaInicial(){
                     </CardActions>
                 </Card>
                 <br></br>
-                <Card sx={{width: 280}} className="cards">
+                <Card sx={{width: 260}} className="cards">
                     <CardMedia
                     component="img"
                     height="180"
@@ -52,7 +53,7 @@ function PaginaInicial(){
             </div>
 
             <div className="ultimosCards">
-                <Card sx={{width: 280}} className="cards">
+                <Card sx={{width: 260}} className="cards">
                     <CardMedia
                     component="img"
                     height="180"
@@ -64,7 +65,7 @@ function PaginaInicial(){
                     </CardActions>
                 </Card>
                 <br></br>
-                <Card sx={{width: 280}} className="cards">
+                <Card sx={{width: 260}} className="cards">
                     <CardMedia
                     component="img"
                     height="180"
@@ -103,10 +104,10 @@ function PaginaInicial(){
                 </Card>
             </div> */}
 
-            <div className="quadro">
+            <div className="quadroAp">
             <br></br>
             <br></br>
-            <Card sx={{width: 280}} className="cards">
+            <Card sx={{width: 260}} className="cards">
                     <CardMedia
                     component="txt"
                     height="180"
@@ -124,6 +125,7 @@ function PaginaInicial(){
                 </Card>
             </div>
         </div>
+    </div>
     )
 }
 

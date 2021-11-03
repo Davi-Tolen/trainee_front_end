@@ -35,7 +35,7 @@ function Atendimento() {
               controlId="exampleForm.ControlTextarea1"
             >
               <Form.Label>Mensagem</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+              <Form.Control style={{maxHeight: "100px"}} as="textarea" rows={3} />
             </Form.Group>
             <Button variant="info">Enviar</Button>{" "}
           </Form>

@@ -86,13 +86,13 @@ function Login() {
             </div>
 
             <Button variant="outline-dark">
-              <GrFacebook />
+              <GrFacebook style={{marginRight: "12px"}}/>
               Continuar com Facebook
             </Button>
 
             <p></p>
             <Button variant="outline-dark">
-              <FcGoogle />
+              <FcGoogle style={{marginRight: "12px"}}/>
               Continuar com Google
             </Button>
 
