@@ -22,7 +22,7 @@ function Login() {
         return history.push("/menu/home");
       }
 
-      login(response.data.accessToken);
+      login(response.data.accessToken, response.data.user.user_id);
 
       history.push("/ap/paginainicial");
     } catch (error) {

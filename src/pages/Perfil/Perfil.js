@@ -1,6 +1,7 @@
 import api from "../../services/api";
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
+import { getUserId } from "../../services/auth";
 import "./Perfil.css";
 function Perfil() {
   const [fullname, setFullname] = useState();
@@ -8,33 +9,56 @@ function Perfil() {
   const [phonenumber, setPhonenumber] = useState();
   const [userbirthdate, setUserbirthdate] = useState();
   const [useradress, setUseradress] = useState();
-  const [password, setPassword] = useState();
+  // const [password, setPassword] = useState();
+  const [data, setData] = useState([]);
+  const user_id = getUserId();
+
+  async function updateData(e){
+    const body = {
+      name: fullname,
+      email: emailadress, 
+      phone: phonenumber, 
+      adress: useradress, 
+      birthdate: userbirthdate,
+    }
+    console.log("console",body)
+    try{
+      const response = await api.put(
+        `/user/${user_id}`, body
+      );
+      setTeste(!teste)
+      getData()
+    } catch(error){
+      console.error(error);
+    }
+  }
 
   async function getData() {
-    try {
-      const response = await api.get(
-        "/user/de0dd342-4c8b-4e23-abc0-1737f0d56872"
-      );
-      const user = response.data[0];
-      const { user_id, name, email, phone, adress, birthdate } = user;
-      const setfullname = () => setFullname(name);
-      const setemailladress = () => setEmailladress(email);
-      const setphonenumber = () => setPhonenumber(phone);
-      const setuseradress = () => setUseradress(adress);
-      const setuserbirthdate = () => setUserbirthdate(birthdate);
+    const response = await api.get(
+      `/user/${user_id}`
+    );
+    setData(response.data);
+    // try {
+    //   const user = response.data[0];
+    //   const { user_id, name, email, phone, adress, birthdate } = user;
+    //   const setfullname = () => setFullname(name);
+    //   const setemailladress = () => setEmailladress(email);
+    //   const setphonenumber = () => setPhonenumber(phone);
+    //   const setuseradress = () => setUseradress(adress);
+    //   const setuserbirthdate = () => setUserbirthdate(birthdate);
 
-      function setar() {
-        setfullname();
-        setemailladress();
-        setphonenumber();
-        setuseradress();
-        setuserbirthdate();
-      }
-      setar();
-    } catch (error) {
-      console.warn(error);
-      alert("Algo deu errado!");
-    }
+    //   function setar() {
+    //     setfullname();
+    //     setemailladress();
+    //     setphonenumber();
+    //     setuseradress();
+    //     setuserbirthdate();
+    //   }
+    //   setar();
+    // } catch (error) {
+    //   console.warn(error);
+    //   alert("Algo deu errado!");
+    // }
   }
   useEffect(() => {
     getData();
@@ -54,11 +78,11 @@ function Perfil() {
             </div>
 
             <div className="quadro2">
-              <p className="quadro-dados">{fullname}</p>
-              <p className="quadro-dados">{emailadress}</p>
-              <p className="quadro-dados">{phonenumber}</p>
-              <p className="quadro-dados">{userbirthdate}</p>
-              <p className="quadro-dados">{useradress}</p>
+              <p className="quadro-dados">{data.name}</p>
+              <p className="quadro-dados">{data.email}</p>
+              <p className="quadro-dados">{data.phone}</p>
+              <p className="quadro-dados">{data.birthdate}</p>
+              <p className="quadro-dados">{data.adress}</p>
             </div>
           </div>
           <div className="quadro3">
@@ -87,51 +111,56 @@ function Perfil() {
                 id="fullname"
                 className="quadro-dados"
                 type="text"
-                placeholder={fullname}
+                placeholder={data.name}
+                value={fullname}
                 onChange={(e) => setFullname(e.target.value)}
               ></input>
               <input
                 id="emailadress"
                 className="quadro-dados"
                 type="email"
-                placeholder={emailadress}
+                placeholder={data.email}
+                value={emailadress}
                 onChange={(e) => setEmailladress(e.target.value)}
               ></input>
               <input
                 id="phonenumber"
                 className="quadro-dados"
                 type="text"
-                placeholder={phonenumber}
+                placeholder={data.phone}
+                value={phonenumber}
                 onChange={(e) => setPhonenumber(e.target.value)}
               ></input>
               <input
                 id="birthdate"
                 className="quadro-dados"
                 type="date"
-                placeholder={userbirthdate}
+                value={userbirthdate}
+                placeholder={data.birthdate}
                 onChange={(e) => setUserbirthdate(e.target.value)}
               ></input>
               <input
                 id="adress"
                 className="quadro-dados"
                 type="text"
-                placeholder={useradress}
+                placeholder={data.adress}
+                value={useradress}
                 onChange={(e) => setUseradress(e.target.value)}
               ></input>
-              <input
+              {/* <input
                 id="password"
                 className="quadro-dados"
                 type="password"
                 placeholder="Senha"
                 onChange={(e) => setPassword(e.target.value)}
-              ></input>
+              ></input> */}
             </div>
           </div>
           <div className="quadro3">
             <Button
               className="alterardados"
               variant="light"
-              onClick={() => setTeste((antigo) => !antigo)}
+              onClick={updateData}
             >
               Confirmar Mudanças
             </Button>

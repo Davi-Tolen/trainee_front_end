@@ -1,29 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import api from "../../services/api";
+import { getUserId } from "../../services/auth";
 
 import "./Agendamento.css";
 
 function Agendamento() {
   const [doctor_id, setDocId] = useState();
-  const [date, setData] = useState();
+  const [date, setDate] = useState();
   const [hour, setHorario] = useState();
   const [filtro, setFiltro] = useState("selecione");
   const [showCardiologia,setshowCardiologia] = useState(true);
   const [showNeurologia, setshowNeurologia] = useState(true);
   const [showPneumologia, setshowPneumologia] = useState(true);
   const [showTodos, setShowTodos] = useState(true)
+  const user_id = getUserId();
+  const [data, setData] = useState([]);
 
   async function handleAgendamento(e){
     e.preventDefault();
     try{
-        const response = await api.get(
-          "/user/de0dd342-4c8b-4e23-abc0-1737f0d56872"
-        );
-        const user = response.data[0];
-        const {user_id} = user;
         console.log(user_id)
-       await api.post("/consultation", {
+        await api.post("/consultation", {
         user_id,
         date,
         hour,
@@ -67,7 +65,7 @@ function Agendamento() {
                 {showCardiologia && <div>
                 <Form.Select className="form-select1" aria-label="Default select example" onChange={(e) => setDocId(e.target.value)  }>
                   <option value="selecione">Selecione o profissional</option>
-                  <option value="09154ef3-cf81-4860-a830-8625d9c728a1">Mary Jane</option>
+                  <option value="40efdbe9-be8e-42e7-8e63-faf9d68f0635">Mary Jane</option>
                   <option value="Carolaine Santos">Carolaine Santos</option>
                 </Form.Select>
                 </div>}
@@ -98,7 +96,7 @@ function Agendamento() {
                 </div>}
               </div>
               <Form.Group controlId="data" >
-                <Form.Control type="date" placeholder="Data" onChange= {(e) => setData(e.target.value)}  />
+                <Form.Control type="date" placeholder="Data" onChange= {(e) => setDate(e.target.value)}  />
               </Form.Group>
               <Form.Select className="form-select1" aria-label="Default select example" onChange={(e) => setHorario(e.target.value)  }>
                   <option value="selecione">Selecione o horário</option>
