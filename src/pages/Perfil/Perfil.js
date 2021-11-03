@@ -9,11 +9,12 @@ function Perfil() {
   const [userbirthdate, setUserbirthdate] = useState();
   const [useradress, setUseradress] = useState();
   const [password, setPassword] = useState();
+  const [teste, setTeste] = useState(true);
 
   async function getData() {
     try {
       const response = await api.get(
-        "/user/7276464d-0377-46b7-ada1-4eb652b042b3"
+        "/user/88102436-01d1-4a2d-9927-a311e873039b"
       );
       const user = response.data[0];
       const { user_id, name, email, phone, adress, birthdate } = user;
@@ -36,10 +37,41 @@ function Perfil() {
       alert("Algo deu errado!");
     }
   }
+  async function updateData() {
+    try {
+      const response = await api.get(
+        "/user/88102436-01d1-4a2d-9927-a311e873039b"
+      );
+      const User = response.data[0];
+      let { user_id, name, email, phone, adress, birthdate } = User;
+      function changeData() {
+        name = fullname;
+        email = emailadress;
+        phone = phonenumber;
+        adress = useradress;
+        birthdate = userbirthdate;
+      }
+      changeData();
+      const user = { name, email, phone, adress, birthdate };
+      console.log(user);
+      await api.put("/user/88102436-01d1-4a2d-9927-a311e873039b", user);
+    } catch (error) {
+      console.warn(error);
+      alert("Algo deu errado!");
+    }
+  }
+  function alterardados() {
+    const setAlterar = () => setTeste((antigo) => !antigo);
+    setAlterar();
+  }
+  function confirmarmudanças() {
+    updateData();
+    alterardados();
+  }
   useEffect(() => {
     getData();
   }, []);
-  const [teste, setTeste] = useState(true);
+
   return (
     <div className="perfil">
       {teste ? (
@@ -131,7 +163,7 @@ function Perfil() {
             <Button
               className="alterardados"
               variant="light"
-              onClick={() => setTeste((antigo) => !antigo)}
+              onClick={confirmarmudanças}
             >
               Confirmar Mudanças
             </Button>
