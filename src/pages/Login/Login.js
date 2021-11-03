@@ -35,8 +35,8 @@ function Login() {
     }
   }
   return (
-    <div className="base">
-      <div className="container">
+    <div className="baseLogin">
+      <div className="containerLogin">
         <div className="borderOne">
           <div className="imagem2">
             <a className="link" href="/menu/home">
