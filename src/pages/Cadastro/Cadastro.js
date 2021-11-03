@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import MaskedInput from "react-input-mask";
 import api from "../../services/api";
 import "./Cadastro.css";
 // import {IconContext} from "react-icons/lib";
@@ -36,7 +37,6 @@ function Cadastro() {
       console.warn(error);
     }
   }
- 
 
   return (
     <div className="base">
@@ -68,21 +68,24 @@ function Cadastro() {
               </Row>
               <Row className="mb-3">
                 <Form.Group as={Col} controlId="nascimento">
-                  <Form.Control
-                    type="birthday"
+                  <MaskedInput
+                    className="maskedinput"
+                    mask="99/99/9999"
                     placeholder="Nascimento"
                     onChange={(e) => setBirthdate(e.target.value)}
                   />
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="telefone">
-                  <Form.Control
-                    type="phone"
+                  <MaskedInput
+                    className="maskedinput"
+                    mask="(99)9999-9999"
                     placeholder="Telefone"
                     onChange={(e) => setPhone(e.target.value)}
                   />
                 </Form.Group>
               </Row>
+
               <Row className="mb-3">
                 <Form.Group controlId="endereço">
                   <Form.Control
@@ -110,7 +113,6 @@ function Cadastro() {
                   />
                 </Form.Group>
               </Row>
-
               <Button className="cadBtn" type="submit" onClick={handleCadastro}>
                 Enviar
               </Button>

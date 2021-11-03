@@ -1,6 +1,7 @@
 import api from "../../services/api";
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
+import MaskedInput from "react-input-mask";
 import { getUserId } from "../../services/auth";
 import "./Perfil.css";
 function Perfil() {
@@ -9,7 +10,7 @@ function Perfil() {
   const [phonenumber, setPhonenumber] = useState();
   const [userbirthdate, setUserbirthdate] = useState();
   const [useradress, setUseradress] = useState();
-  // const [password, setPassword] = useState();
+  const [password, setPassword] = useState();
   const [data, setData] = useState([]);
   const user_id = getUserId();
 
@@ -97,22 +98,24 @@ function Perfil() {
                 value={emailadress}
                 onChange={(e) => setEmailladress(e.target.value)}
               ></input>
-              <input
+              <MaskedInput
                 id="phonenumber"
+                mask="(99)9999-9999"
                 className="quadro-dados"
                 type="text"
                 placeholder={data.phone}
                 value={phonenumber}
                 onChange={(e) => setPhonenumber(e.target.value)}
-              ></input>
-              <input
+              ></MaskedInput>
+              <MaskedInput
                 id="birthdate"
+                mask="99/99/9999"
                 className="quadro-dados"
-                type="date"
+                type="text"
                 value={userbirthdate}
                 placeholder={data.birthdate}
                 onChange={(e) => setUserbirthdate(e.target.value)}
-              ></input>
+              ></MaskedInput>
               <input
                 id="adress"
                 className="quadro-dados"
@@ -121,13 +124,13 @@ function Perfil() {
                 value={useradress}
                 onChange={(e) => setUseradress(e.target.value)}
               ></input>
-              {/* <input
+              <input
                 id="password"
                 className="quadro-dados"
                 type="password"
                 placeholder="Senha"
                 onChange={(e) => setPassword(e.target.value)}
-              ></input> */}
+              ></input>
             </div>
           </div>
           <div className="quadro3">
