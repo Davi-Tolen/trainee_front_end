@@ -121,7 +121,7 @@ function Cadastro() {
                   <Button
                     variant="link"
                     onClick={() => {
-                      history.push("/Cadastro");
+                      history.push("/Login");
                     }}
                   >
                     Fazer Login
