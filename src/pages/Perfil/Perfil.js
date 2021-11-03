@@ -14,7 +14,7 @@ function Perfil() {
   async function getData() {
     try {
       const response = await api.get(
-        "/user/88102436-01d1-4a2d-9927-a311e873039b"
+        "/user/b635524b-c0b4-4e37-b40a-531fae19c528"
       );
       const user = response.data[0];
       const { user_id, name, email, phone, adress, birthdate } = user;
@@ -40,7 +40,7 @@ function Perfil() {
   async function updateData() {
     try {
       const response = await api.get(
-        "/user/88102436-01d1-4a2d-9927-a311e873039b"
+        "/user/b635524b-c0b4-4e37-b40a-531fae19c528"
       );
       const User = response.data[0];
       let { user_id, name, email, phone, adress, birthdate } = User;
@@ -54,7 +54,7 @@ function Perfil() {
       changeData();
       const user = { name, email, phone, adress, birthdate };
       console.log(user);
-      await api.put("/user/88102436-01d1-4a2d-9927-a311e873039b", user);
+      await api.put("/user/b635524b-c0b4-4e37-b40a-531fae19c528", user);
     } catch (error) {
       console.warn(error);
       alert("Algo deu errado!");
