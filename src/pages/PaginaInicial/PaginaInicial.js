@@ -1,83 +1,121 @@
-import { Card, CardActions, CardContent, CardMedia, Typography, Button, Link } from "@mui/material";
-import React from "react";
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+  Button,
+  Link,
+} from "@mui/material";
+import api from "../../services/api";
+import { getUserId } from "../../services/auth";
+import React, { useEffect, useState } from "react";
 // import { Card, Button } from "react-bootstrap";
-import "./PaginaInicial.css"
-import {useHistory} from "react-router-dom"
+import "./PaginaInicial.css";
+import { useHistory } from "react-router-dom";
 
-function PaginaInicial(){
-    const history = useHistory()
+function PaginaInicial() {
+  const history = useHistory();
 
-    function medicos(){
-        history.push("/ap/medicos")
-    }
+  function medicos() {
+    history.push("/ap/medicos");
+  }
 
-    function atendimento(){
-        history.push("/ap/atendimento")
-    }
+  function atendimento() {
+    history.push("/ap/atendimento");
+  }
 
-    function agendamento(){
-        history.push("/ap/agendamento")
-    }
+  function agendamento() {
+    history.push("/ap/agendamento");
+  }
 
-    function perfil(){
-        history.push("/ap/perfil")
-    }
+  function perfil() {
+    history.push("/ap/perfil");
+  }
+  //   const [data, setData] = useState([]);
+//   const user_id = getUserId();
+//   const [consul1, setConsul1] = useState();
+//   const [consul2, setConsul2] = useState();
+//   const [consul3, setConsul3] = useState();
+//   const [consul4, setConsul4] = useState();
+//   const [consul5, setConsul5] = useState();
+//   async function getData() {
+//     const response = await api.get(`/consultation/${user_id}`);
+//     // setData(response.data);
+//     const [consulta1, consulta2, consulta3, consulta4, consulta5] =
+//       response.data;
+//     setConsul1(consulta1.date);
+//     setConsul2(consulta2.date);
+//     setConsul3(consulta3.date);
+//     setConsul4(consulta4.date);
+//     setConsul5(consulta5.date);
+//   }
 
-    return(
-        <div className="paginainicial">
-            <div className="primeirosCards">
-                <Card sx={{width: 280}} className="cards">
-                    <CardMedia
-                    component="img"
-                    height="180"
-                    image="/images/Agendamento.jpg"
-                    alt="foto"
-                    />
-                    <CardActions className="cardActions">
-                        <Button size="small" onClick={agendamento}>Agendamento</Button>
-                    </CardActions>
-                </Card>
-                <br></br>
-                <Card sx={{width: 280}} className="cards">
-                    <CardMedia
-                    component="img"
-                    height="180"
-                    image="/images/medica.jpg"
-                    alt="foto"
-                    />
-                    <CardActions className="cardActions">
-                        <Button size="small" onClick={medicos}>Médicos</Button>
-                    </CardActions>
-                </Card>
-            </div>
+//   useEffect(() => {
+//     getData();
+//   }, []);
 
-            <div className="ultimosCards">
-                <Card sx={{width: 280}} className="cards">
-                    <CardMedia
-                    component="img"
-                    height="180"
-                    image="/images/chat.png"
-                    alt="foto"
-                    />
-                    <CardActions className="cardActions">
-                        <Button size="small" onClick={atendimento}>Atendimento</Button>
-                    </CardActions>
-                </Card>
-                <br></br>
-                <Card sx={{width: 280}} className="cards">
-                    <CardMedia
-                    component="img"
-                    height="180"
-                    image="/images/perfil.jpg"
-                    alt="foto"
-                    />
-                    <CardActions className="cardActions">
-                        <Button size="small" onClick={perfil}>Perfil</Button>
-                    </CardActions>
-                </Card>
-            </div>
-
-            {/* <div ultimosCards>
+  return (
+    <div className="paginainicial">
+      <div className="primeirosCards">
+        <Card sx={{ width: 280 }} className="cards">
+          <CardMedia
+            component="img"
+            height="180"
+            image="/images/Agendamento.jpg"
+            alt="foto"
+          />
+          <CardActions className="cardActions">
+            <Button size="small" onClick={agendamento}>
+              Agendamento
+            </Button>
+          </CardActions>
+        </Card>
+        <br></br>
+        <Card sx={{ width: 280 }} className="cards">
+          <CardMedia
+            component="img"
+            height="180"
+            image="/images/medica.jpg"
+            alt="foto"
+          />
+          <CardActions className="cardActions">
+            <Button size="small" onClick={medicos}>
+              Médicos
+            </Button>
+          </CardActions>
+        </Card>
+      </div>
+      <div className="ultimosCards">
+        <Card sx={{ width: 280 }} className="cards">
+          <CardMedia
+            component="img"
+            height="180"
+            image="/images/chat.png"
+            alt="foto"
+          />
+          <CardActions className="cardActions">
+            <Button size="small" onClick={atendimento}>
+              Atendimento
+            </Button>
+          </CardActions>
+        </Card>
+        <br></br>
+        <Card sx={{ width: 280 }} className="cards">
+          <CardMedia
+            component="img"
+            height="180"
+            image="/images/perfil.jpg"
+            alt="foto"
+          />
+          <CardActions className="cardActions">
+            <Button size="small" onClick={perfil}>
+              Perfil
+            </Button>
+          </CardActions>
+        </Card>
+      </div>
+      {/* <div ultimosCards>
                 <Card sx={{width: 280}} className="cards">
                 <CardMedia
                 component="img"
@@ -102,29 +140,37 @@ function PaginaInicial(){
                     </CardActions>
                 </Card>
             </div> */}
-
-            <div className="quadro">
-            <br></br>
-            <br></br>
-            <Card sx={{width: 280}} className="cards">
-                    <CardMedia
-                    component="txt"
-                    height="180"
-                    />
-                    <CardContent className="textoquadro">
-                        <div>
-                        <Typography>Quadro de Avisos</Typography>
-                        <div className="avisos">
-                        <Typography >
-                        <Link onClick={agendamento}>Consulta Dra Ivete 12/04/2002</Link>
-                        </Typography>
-                        </div>
-                        </div>
-                    </CardContent>
-                </Card>
+      <div className="quadro">
+        <br></br>
+        <br></br>
+        <Card sx={{ width: 280 }} className="cards">
+          <CardMedia component="txt" height="180" />
+          <CardContent className="textoquadro">
+            <div className="">
+              <Typography>Quadro de Avisos</Typography>
+              <div className="avisos">
+                <Typography>
+                  <Link onClick={agendamento}>
+                    Consulta Dra Ivete 12/04/2002
+                  </Link>
+                </Typography>
+              </div>
+              {/* <div>
+                <div>{consul1}</div>
+                <div>{consul2}</div>
+                <div>{consul3}</div>
+                <div>{consul4}</div>
+                <div>{consul5}</div>
+                <div>
+                  <p></p>
+                </div>
+              </div> */}
             </div>
-        </div>
-    )
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
 }
 
 export default PaginaInicial;

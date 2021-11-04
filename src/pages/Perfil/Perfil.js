@@ -142,6 +142,15 @@ function Perfil() {
               Confirmar Mudanças
             </Button>
           </div>
+          <div className="quadro3">
+            <Button
+              className="alterardados"
+              variant="light"
+              // onClick={}
+            >
+              Excluir Usuário
+            </Button>
+          </div>
         </div>
       )}
     </div>
