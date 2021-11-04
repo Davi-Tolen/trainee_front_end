@@ -32,28 +32,18 @@ function PaginaInicial() {
   function perfil() {
     history.push("/ap/perfil");
   }
-  //   const [data, setData] = useState([]);
-//   const user_id = getUserId();
-//   const [consul1, setConsul1] = useState();
-//   const [consul2, setConsul2] = useState();
-//   const [consul3, setConsul3] = useState();
-//   const [consul4, setConsul4] = useState();
-//   const [consul5, setConsul5] = useState();
-//   async function getData() {
-//     const response = await api.get(`/consultation/${user_id}`);
-//     // setData(response.data);
-//     const [consulta1, consulta2, consulta3, consulta4, consulta5] =
-//       response.data;
-//     setConsul1(consulta1.date);
-//     setConsul2(consulta2.date);
-//     setConsul3(consulta3.date);
-//     setConsul4(consulta4.date);
-//     setConsul5(consulta5.date);
-//   }
 
-//   useEffect(() => {
-//     getData();
-//   }, []);
+  const user_id = getUserId();
+  const [data, setData] = useState([]);
+
+  async function getData() {
+    const response = await api.get(`/consultation/${user_id}`);
+    setData(response.data);
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <div className="paginainicial">
@@ -146,25 +136,13 @@ function PaginaInicial() {
         <Card sx={{ width: 280 }} className="cards">
           <CardMedia component="txt" height="180" />
           <CardContent className="textoquadro">
-            <div className="">
-              <Typography>Quadro de Avisos</Typography>
-              <div className="avisos">
-                <Typography>
-                  <Link onClick={agendamento}>
-                    Consulta Dra Ivete 12/04/2002
-                  </Link>
-                </Typography>
-              </div>
-              {/* <div>
-                <div>{consul1}</div>
-                <div>{consul2}</div>
-                <div>{consul3}</div>
-                <div>{consul4}</div>
-                <div>{consul5}</div>
-                <div>
-                  <p></p>
-                </div>
-              </div> */}
+            <div>
+              {data.map((consult, index) => {
+                if (index > 4) {
+                  return undefined;
+                }
+                return <p>{consult.date}</p>;
+              })}
             </div>
           </CardContent>
         </Card>
