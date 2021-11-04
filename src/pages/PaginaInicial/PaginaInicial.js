@@ -137,11 +137,14 @@ function PaginaInicial() {
           <CardMedia component="txt" height="180" />
           <CardContent className="textoquadro">
             <div>
+              <div className="centralizatexto">
+              <p>Quadro de Eventos</p>
+              </div>
               {data.map((consult, index) => {
                 if (index > 4) {
                   return undefined;
                 }
-                return <p>{consult.date}</p>;
+                return <Link href="/ap/agendamento">Consulta Agendada: {consult.date}</Link>;
               })}
             </div>
           </CardContent>

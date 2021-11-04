@@ -49,6 +49,11 @@
         justify-content: center;
         color: black;
     }
+    
+    .centralizatexto{
+        display: flex;
+        justify-content: center;
+    }
 
 
 
@@ -105,6 +110,11 @@
     align-items: center;
     justify-content: center;
     color: black;
+}
+
+.centralizatexto{
+    display: flex;
+    justify-content: center;
 }
     
 }
