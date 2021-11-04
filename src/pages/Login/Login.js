@@ -35,8 +35,8 @@ function Login() {
     }
   }
   return (
-    <div className="base">
-      <div className="container">
+    <div className="baseLogin">
+      <div className="containerLogin">
         <div className="borderOne">
           <div className="imagem2">
             <a className="link" href="/menu/home">
@@ -86,13 +86,13 @@ function Login() {
             </div>
 
             <Button variant="outline-dark">
-              <GrFacebook />
+              <GrFacebook style={{marginRight: "12px"}}/>
               Continuar com Facebook
             </Button>
 
             <p></p>
             <Button variant="outline-dark">
-              <FcGoogle />
+              <FcGoogle style={{marginRight: "12px"}}/>
               Continuar com Google
             </Button>
 
