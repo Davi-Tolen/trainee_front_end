@@ -1,10 +1,15 @@
 import api from "../../services/api";
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import MaskedInput from "react-input-mask";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 import { getUserId } from "../../services/auth";
+import { logout } from "../../services/auth";
 import "./Perfil.css";
 function Perfil() {
+  const history = useHistory();
   const [fullname, setFullname] = useState();
   const [emailadress, setEmailladress] = useState();
   const [phonenumber, setPhonenumber] = useState();
@@ -13,7 +18,7 @@ function Perfil() {
   const [password, setPassword] = useState();
   const [data, setData] = useState([]);
   const user_id = getUserId();
-
+  const [teste, setTeste] = useState(true);
   async function updateData(e) {
     const body = {
       name: fullname,
@@ -30,15 +35,31 @@ function Perfil() {
       console.error(error);
     }
   }
-
+  async function deleteFirebase() {
+    try {
+      await api.delete(`/delete/${user_id}`);
+    } catch (error) {}
+  }
+  async function deleteUser() {
+    try {
+      await api.delete(`/user/${user_id}`);
+      logout();
+      history.push("/menu/home");
+    } catch (error) {}
+  }
+  async function handleDelete(){
+    deleteFirebase();
+    deleteUser();
+  };
   async function getData() {
     const response = await api.get(`/user/${user_id}`);
     setData(response.data);
   }
+
   useEffect(() => {
     getData();
   }, []);
-  const [teste, setTeste] = useState(true);
+
   return (
     <div className="perfil">
       {teste ? (
@@ -79,7 +100,7 @@ function Perfil() {
               <p className="quuadro-titles">Telefone:</p>
               <p className="quuadro-titles">Data de Nascimento:</p>
               <p className="quuadro-titles">Endereço:</p>
-              <p className="quuadro-titles">Senha:</p>
+              {/* <p className="quuadro-titles">Senha:</p> */}
             </div>
             <div className="quadro2">
               <input
@@ -124,13 +145,13 @@ function Perfil() {
                 value={useradress}
                 onChange={(e) => setUseradress(e.target.value)}
               ></input>
-              <input
+              {/* <input
                 id="password"
                 className="quadro-dados"
                 type="password"
                 placeholder="Senha"
                 onChange={(e) => setPassword(e.target.value)}
-              ></input>
+              ></input> */}
             </div>
           </div>
           <div className="quadro3">
@@ -143,13 +164,36 @@ function Perfil() {
             </Button>
           </div>
           <div className="quadro3">
-            <Button
+            {/* <Button
               className="alterardados"
               variant="light"
-              // onClick={}
+              onClick={handleDelete}
             >
               Excluir Usuário
-            </Button>
+            </Button> */}
+            <Popup
+              trigger={
+                <Button
+                  className="alterardados"
+                  variant="light"
+                  // onClick={handleDelete}
+                >
+                  Excluir Usuário
+                </Button>
+              }
+              position="top center"
+            >
+              <div>
+                <p>Tem certeza que deseja fazer isso ?</p>
+                <Button
+                  className="confirmando"
+                  variant="light"
+                  onClick={handleDelete}
+                >
+                  Sim
+                </Button>
+              </div>
+            </Popup>
           </div>
         </div>
       )}

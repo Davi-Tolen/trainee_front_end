@@ -71,6 +71,13 @@
 .alterardados:hover{
   background-color: #FA6666 !important;
 }
+.confirmando{
+  width: 100%;
+  background-color: #FA6666  !important;
+}
+.confirmando:hover{
+  background-color: #E90D0A  !important;
+}
 }
     
   
@@ -154,5 +161,12 @@
 }
 .alterardados:hover{
   background-color: #FA6666 !important;
+}
+.confirmando{
+  width: 100%;
+  background-color: #FA6666  !important;
+}
+.confirmando:hover{
+  background-color: #E90D0A  !important;
 }
 }
