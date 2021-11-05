@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import {
   AppBar,
@@ -27,12 +27,16 @@ import { FiMenu } from "react-icons/fi";
 import { IconContext } from "react-icons/lib";
 import { logout } from "../../services/auth";
 import { Form, Button } from "react-bootstrap";
+import { getUserId } from "../../services/auth";
+import api from "../../services/api";
 
 function Header(props) {
   const history = useHistory();
   const [currentPage, setCurrentPage] = useState("/ap/paginainicial");
   const [avatar, setAvatar] = useState();
   const [open, setOpen] = useState(false);
+  const [data, setData] = useState();
+  const user_id = getUserId();
 
   function handleDrawer(isOpen) {
     setOpen(isOpen);
@@ -46,6 +50,15 @@ function Header(props) {
     setOpen(on)
     history.push(pathName)
   }
+
+  async function getData() {
+    const response = await api.get(`/user/${user_id}`);
+    setData(response.data);
+    console.log(user_id)
+  }
+  useEffect(() => {
+    getData();
+  }, []);
 
   const pages = [
     {

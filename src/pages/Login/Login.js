@@ -3,10 +3,12 @@ import { Form, Button } from "react-bootstrap";
 import api from "../../services/api";
 import { login } from "../../services/auth";
 
+
 import "./Login.css";
 import { FcGoogle } from "react-icons/fc";
 import { GrFacebook } from "react-icons/gr";
 import { useHistory } from "react-router";
+const Swal = require('sweetalert2');
 
 function Login() {
   const [email, setEmail] = useState();
@@ -27,7 +29,13 @@ function Login() {
       history.push("/ap/paginainicial");
     } catch (error) {
       if (error.response.status === 403) {
-        alert("Credentials Invalidas!");
+        Swal.fire({
+          // position: 'top-end',
+          icon: 'error',
+          title: 'Credenciais Inválidas!',
+          showConfirmButton: false,
+          timer: 1500
+        })
       } else {
         alert(error.response.data.notification);
       }

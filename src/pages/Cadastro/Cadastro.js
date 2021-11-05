@@ -4,6 +4,9 @@ import { useHistory } from "react-router-dom";
 import MaskedInput from "react-input-mask";
 import api from "../../services/api";
 import "./Cadastro.css";
+import {Alert} from '@mui/material';
+import Stack from '@mui/material/Stack';
+const Swal = require('sweetalert2');
 // import {IconContext} from "react-icons/lib";
 // import {IoMdSend} from "react-icons/io";
 
@@ -27,12 +30,30 @@ function Cadastro() {
         adress,
         password,
       });
-      alert("Usuário criado com sucesso !");
+      Swal.fire({
+        // position: 'top-end',
+        icon: 'success',
+        title: 'Usuário cadastrado com sucesso!',
+        showConfirmButton: false,
+        timer: 1500
+      })
     } catch (error) {
       if (error.response.status === 403) {
-        alert("Credentials Invalidas!");
+        Swal.fire({
+          // position: 'top-end',
+          icon: 'error',
+          title: 'Credenciais Inválidas!',
+          showConfirmButton: false,
+          timer: 1500
+        })
       } else {
-        alert("Preencha todos os campos corretamente!");
+        Swal.fire({
+          // position: 'top-end',
+          icon: 'error',
+          title: 'Preencha os campos corretamente!',
+          showConfirmButton: false,
+          timer: 1500
+        })
       }
       console.warn(error);
     }
@@ -67,15 +88,20 @@ function Cadastro() {
                 </Form.Group>
               </Row>
               <Row className="mb-3">
+
                 <Form.Group as={Col} controlId="nascimento">
+                
                   <MaskedInput
                     className="maskedinput"
                     mask="99/99/9999"
                     placeholder="Nascimento"
                     onChange={(e) => setBirthdate(e.target.value)}
                   />
+                  
                 </Form.Group>
+                
 
+                
                 <Form.Group as={Col} controlId="telefone">
                   <MaskedInput
                     className="maskedinput"

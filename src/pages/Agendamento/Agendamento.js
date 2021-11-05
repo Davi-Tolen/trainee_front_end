@@ -5,6 +5,7 @@ import api from "../../services/api";
 import { getUserId } from "../../services/auth";
 
 import "./Agendamento.css";
+const Swal = require('sweetalert2');
 
 function Agendamento() {
   const [doctor_id, setDocId] = useState();
@@ -28,9 +29,21 @@ function Agendamento() {
         hour,
         doctor_id,
       });
-      alert("Consulta marcada com sucesso!");
+      Swal.fire({
+        // position: 'top-end',
+        icon: 'success',
+        title: 'Consulta marcada com sucesso!',
+        showConfirmButton: false,
+        timer: 1500
+      })
     } catch (error) {
-      alert("preencha os campos corretamente!");
+      Swal.fire({
+        // position: 'top-end',
+        icon: 'error',
+        title: 'Preencha os campos corretamente!',
+        showConfirmButton: false,
+        timer: 1500
+      })
     }
   }
 
