@@ -15,10 +15,13 @@ function Perfil() {
   const [phonenumber, setPhonenumber] = useState();
   const [userbirthdate, setUserbirthdate] = useState();
   const [useradress, setUseradress] = useState();
-  const [password, setPassword] = useState();
   const [data, setData] = useState([]);
   const user_id = getUserId();
   const [teste, setTeste] = useState(true);
+
+  async function updateFirebase() {
+    const response = await api.put("/update", { emailadress });
+  }
   async function updateData(e) {
     const body = {
       name: fullname,
@@ -31,10 +34,14 @@ function Perfil() {
     try {
       await api.put(`/user/${user_id}`, body);
       getData();
-      window.location.href = "/ap/perfil"
+      window.location.href = "/ap/perfil";
     } catch (error) {
       console.error(error);
     }
+  }
+  function handleUpdate() {
+    updateData();
+    updateFirebase();
   }
   async function deleteFirebase() {
     try {
@@ -48,10 +55,10 @@ function Perfil() {
       history.push("/menu/home");
     } catch (error) {}
   }
-  async function handleDelete(){
+  async function handleDelete() {
     deleteFirebase();
     deleteUser();
-  };
+  }
   async function getData() {
     const response = await api.get(`/user/${user_id}`);
     setData(response.data);
@@ -159,26 +166,16 @@ function Perfil() {
             <Button
               className="alterardados"
               variant="light"
-              onClick={updateData}
+              onClick={handleUpdate}
             >
               Confirmar Mudanças
             </Button>
           </div>
+
           <div className="quadro3">
-            {/* <Button
-              className="alterardados"
-              variant="light"
-              onClick={handleDelete}
-            >
-              Excluir Usuário
-            </Button> */}
             <Popup
               trigger={
-                <Button
-                  className="alterardados"
-                  variant="light"
-                  // onClick={handleDelete}
-                >
+                <Button className="alterardados" variant="light">
                   Excluir Usuário
                 </Button>
               }
