@@ -28,7 +28,8 @@ function Login() {
 
       history.push("/ap/paginainicial");
     } catch (error) {
-      if (error.response.status === 403) {
+      console.log(error)
+      if (error.response?.status === 403) {
         Swal.fire({
           // position: 'top-end',
           icon: 'error',
@@ -37,7 +38,7 @@ function Login() {
           timer: 1500
         })
       } else {
-        alert(error.response.data.notification);
+        alert(error.response?.data.notification);
       }
       console.warn(error);
     }

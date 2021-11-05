@@ -31,6 +31,7 @@ function Perfil() {
     try {
       await api.put(`/user/${user_id}`, body);
       getData();
+      window.location.href = "/ap/perfil"
     } catch (error) {
       console.error(error);
     }
