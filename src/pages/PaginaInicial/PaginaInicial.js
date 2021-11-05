@@ -145,7 +145,7 @@ function PaginaInicial() {
                 if (index > 4) {
                   return undefined;
                 }
-                return <Link href="/ap/agendamento">Consulta Agendada: {consult.date}</Link>;
+                return <Link href="/ap/agendamento">Consulta Agendada: {consult.date}<br></br></Link>;
               })}
             </div>
           </CardContent>
