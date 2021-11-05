@@ -88,23 +88,18 @@ function Cadastro() {
                 </Form.Group>
               </Row>
               <Row className="mb-3">
-
                 <Form.Group as={Col} controlId="nascimento">
-                
                   <MaskedInput
-                    className="maskedinput"
+                    className="form-control"
                     mask="99/99/9999"
                     placeholder="Nascimento"
                     onChange={(e) => setBirthdate(e.target.value)}
                   />
-                  
                 </Form.Group>
-                
 
-                
                 <Form.Group as={Col} controlId="telefone">
                   <MaskedInput
-                    className="maskedinput"
+                    className="form-control"
                     mask="(99)9999-9999"
                     placeholder="Telefone"
                     onChange={(e) => setPhone(e.target.value)}
