@@ -117,8 +117,8 @@ function Header(props) {
           </IconButton>
           <div className="userContainer">
             <p className="userName">{data?.name}</p>
-            {/* <Avatar alt="Davi" src={avatar}></Avatar> */}
-            <FormControl sx={{ m: 1 }} variant="standard">
+            <Avatar alt="Davi" src="/images/paciente.jpg"></Avatar>
+            {/* <FormControl sx={{ m: 1 }} variant="standard">
                 <Select
                   labelId="demo-customized-select-label"
                   id="demo-customized-select"
@@ -127,12 +127,12 @@ function Header(props) {
                   >
                   {/* <MenuItem value="">
                     <em>None</em>
-                  </MenuItem> */}
+                  </MenuItem> 
                   <MenuItem value="/images/leao.jpg"><Avatar alt="Davi" src="/images/leao.jpg"></Avatar></MenuItem>
                   <MenuItem value="/images/sorriso.jpg"><Avatar alt="Davi" src="/images/sorriso.jpg"></Avatar></MenuItem>
                   <MenuItem value="/images/caneca.jpg"><Avatar alt="Davi" src="/images/caneca.jpg"></Avatar></MenuItem>
                 </Select>
-            </FormControl>
+            </FormControl> */}
           </div>
         </Toolbar>
       </AppBar>
