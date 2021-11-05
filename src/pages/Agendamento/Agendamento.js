@@ -5,7 +5,7 @@ import api from "../../services/api";
 import { getUserId } from "../../services/auth";
 
 import "./Agendamento.css";
-const Swal = require('sweetalert2');
+const Swal = require("sweetalert2");
 
 function Agendamento() {
   const [doctor_id, setDocId] = useState();
@@ -31,19 +31,19 @@ function Agendamento() {
       });
       Swal.fire({
         // position: 'top-end',
-        icon: 'success',
-        title: 'Consulta marcada com sucesso!',
+        icon: "success",
+        title: "Consulta marcada com sucesso!",
         showConfirmButton: false,
-        timer: 1500
-      })
+        timer: 1500,
+      });
     } catch (error) {
       Swal.fire({
         // position: 'top-end',
-        icon: 'error',
-        title: 'Preencha os campos corretamente!',
+        icon: "error",
+        title: "Preencha os campos corretamente!",
         showConfirmButton: false,
-        timer: 1500
-      })
+        timer: 1500,
+      });
     }
   }
 
@@ -107,7 +107,9 @@ function Agendamento() {
                     <option value="40efdbe9-be8e-42e7-8e63-faf9d68f0635">
                       Mary Jane
                     </option>
-                    <option value="Carolaine Santos">Carolaine Santos</option>
+                    <option value="9dbd479c-ba6a-482d-86e2-d29a57fd5c59">
+                      Carolaine Santos
+                    </option>
                   </Form.Select>
                 </div>
               )}
@@ -119,8 +121,12 @@ function Agendamento() {
                     onChange={(e) => setDocId(e.target.value)}
                   >
                     <option value="selecione">Selecione o profissional</option>
-                    <option value="Ivete Sangalo">Ivete Sangalo</option>
-                    <option value="Paola Parmesini">Paola Parmesini</option>
+                    <option value="ab77a015-d0b3-492c-b2f2-14eb18a0832b">
+                      Ivete Sangalo
+                    </option>
+                    <option value="dd32a58c-1c40-402f-bd3c-a0554c193c4b">
+                      Paola Parmesini
+                    </option>
                   </Form.Select>
                 </div>
               )}
@@ -132,8 +138,10 @@ function Agendamento() {
                     onChange={(e) => setDocId(e.target.value)}
                   >
                     <option value="selecione">Selecione o profissional</option>
-                    <option value="Neymar Junior">Neymar Junior</option>
-                    <option value="Francisley Francisco">
+                    <option value="4c6bba6a-90d9-4ff7-a26d-6dc2f06ee185">
+                      Neymar Junior
+                    </option>
+                    <option value="7b555e74-d6b8-43ba-880e-97b080d5a70c">
                       Francisley Francisco
                     </option>
                   </Form.Select>
