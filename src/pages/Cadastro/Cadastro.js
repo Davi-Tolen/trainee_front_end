@@ -73,7 +73,7 @@ function Cadastro() {
                 height="100vh"
               ></img>
             </a>
-            <h1>Cadastro</h1>
+            <h1 className="cadastrotitle">Cadastro</h1>
           </div>
           <div>
             <Form className="dados">
