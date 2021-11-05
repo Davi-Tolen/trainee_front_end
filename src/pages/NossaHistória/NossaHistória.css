@@ -96,10 +96,11 @@
         }
 
         .imagem1 {
-        width: 30%;
+        width: 100%;
         /* margin-top: 250px; */
         margin-right: 4%;
         float: right;
+        margin-bottom: 5%;
         }
 
         .logo {
@@ -108,8 +109,7 @@
         }
 
         .medico {
-            margin-top: 60px;
-            margin-left: 10px;
+            display: none;
         }
 }
 
