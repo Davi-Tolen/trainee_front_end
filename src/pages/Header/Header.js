@@ -103,9 +103,8 @@ function Header(props) {
             <FiMenu />
           </IconButton>
           <div className="userContainer">
-            <p>Teste</p>
-            <p>Teste</p>
             <p className="userName">Davi Tolentino</p>
+            <p>Teste</p>
             {/* <Avatar alt="Davi" src={avatar}></Avatar> */}
             <FormControl sx={{ m: 1 }} variant="standard">
                 <Select
